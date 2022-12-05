@@ -24,9 +24,9 @@ jobs:
           working_directory: my-site
           command: |
             apk add git
-            git clone https://github.com/StefMa/hugo-fresh themes/hugo-fresh
+            git clone https://github.com/cubiest/hugo-invi themes/hugo-invi
       - run:
-          working_directory: my-site/themes/hugo-fresh
+          working_directory: my-site/themes/hugo-invi
           command: |
             set +e
             isPrIfGreaterThanZero=$(expr $CIRCLE_BRANCH : "pull")
@@ -54,15 +54,15 @@ jobs:
             fi
             rm config.toml
             apk add curl
-            curl https://codeload.github.com/stefma/hugo-fresh/tar.gz/$branch | tar -xz --strip=2 hugo-fresh-$branch/exampleSite/
+            curl https://codeload.github.com/cubiest/hugo-invi/tar.gz/$branch | tar -xz --strip=2 hugo-invi-$branch/exampleSite/
       - run:
           name: Replace baseUrl in config
           working_directory: my-site
           command: |
             apk add sed
-            URL=hugo-fresh-$(echo $CIRCLE_BRANCH | tr _ - | tr / -)
+            URL=hugo-invi-$(echo $CIRCLE_BRANCH | tr _ - | tr / -)
             if [ $CIRCLE_BRANCH == "master" ]; then
-              URL=hugo-fresh
+              URL=hugo-invi
             fi
             sed -i "s,http://something-fresh.org,https://${URL}.vercel.app,g" config.yaml
             cat config.yaml
@@ -76,11 +76,11 @@ jobs:
           name: Create now.json
           working_directory: my-site/public
           command: |
-            URL=hugo-fresh-$(echo $CIRCLE_BRANCH | tr _ - | tr / -)
+            URL=hugo-invi-$(echo $CIRCLE_BRANCH | tr _ - | tr / -)
             if [ $CIRCLE_BRANCH == "master" ]; then
-              URL=hugo-fresh
+              URL=hugo-invi
             fi
-            echo "{ \"version\": 2, \"name\": \"hugo-fresh\", \"alias\": \"${URL}\", \"builds\": [{ \"src\": \"**\", \"use\": \"@now/static\" }] }" >> now.json
+            echo "{ \"version\": 2, \"name\": \"hugo-invi\", \"alias\": \"${URL}\", \"builds\": [{ \"src\": \"**\", \"use\": \"@now/static\" }] }" >> now.json
 
       - run:
           name: Install now CLI

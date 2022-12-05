@@ -7,9 +7,9 @@ include_footer: false
 
 ## The Fresh theme for Hugo
 
-**Fresh** is a theme for the [Hugo](https://gohugo.io) static site generator adapted from the gorgeous, [Bulma](https://bulma.io)-based theme of the same name from [CSS Ninja](https://cssninja.io/themes/fresh). You can find a live demo of the original theme [here](https://cssninjastudio.github.io) and a live demo of the Hugo theme [here](https://hugo-fresh.now.sh/).
+**Fresh** is a theme for the [Hugo](https://gohugo.io) static site generator adapted from the gorgeous, [Bulma](https://bulma.io)-based theme of the same name from [CSS Ninja](https://cssninja.io/themes/fresh). You can find a live demo of the original theme [here](https://cssninjastudio.github.io) and a live demo of the Hugo theme [here](https://hugo-invi.now.sh/).
 
-<img src="https://raw.githubusercontent.com/StefMa/hugo-fresh/master/images/screenshot.png" style="margin-left:auto;margin-right:auto;" />
+<img src="https://raw.githubusercontent.com/cubiest/hugo-invi/master/images/screenshot.png" style="margin-left:auto;margin-right:auto;" />
 
 ## Getting started
 
@@ -23,13 +23,13 @@ To create a new site using this theme
 hugo new site my-site && cd my-site
 
 # Clone the Fresh theme
-git clone https://github.com/StefMa/hugo-fresh themes/hugo-fresh
+git clone https://github.com/cubiest/hugo-invi themes/hugo-invi
 
 # Remove the default config
 rm config.toml
 
 # Fetch the example config
-curl -O https://raw.githubusercontent.com/StefMa/hugo-fresh/master/exampleSite/config.yaml
+curl -O https://raw.githubusercontent.com/cubiest/hugo-invi/master/exampleSite/config.yaml
 
 # Run the site locally
 hugo server
@@ -54,13 +54,13 @@ hugo mod init YOUR_MODULE_NAME
 rm config.toml
 
 # Fetch the example config
-curl -O https://raw.githubusercontent.com/StefMa/hugo-fresh/master/exampleSite/config.yaml
+curl -O https://raw.githubusercontent.com/cubiest/hugo-invi/master/exampleSite/config.yaml
 
 # Replace theme with module in config.yaml
-#theme: [hugo-fresh]
+#theme: [hugo-invi]
 module:
   imports:
-    path: github.com/StefMa/hugo-fresh
+    path: github.com/cubiest/hugo-invi
 
 # Run the site locally
 hugo server

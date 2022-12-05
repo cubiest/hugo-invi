@@ -258,7 +258,7 @@ footer:
   logo: fresh-white-alt.svg
   # Social media links (GitHub, Twitter, etc.). All are optional.
   socialmedia:
-  - link: https://github.com/StefMa/hugo-fresh
+  - link: https://github.com/cubiest/hugo-invi
     # Icons are from Font Awesome
     icon: github
   - link: https://dribbble.com/#

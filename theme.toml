@@ -1,12 +1,12 @@
-name = "Hugo Fresh"
+name = "Hugo Invi"
 license = "MIT"
-licenselink = "https://github.com/StefMa/hugo-fresh/blob/master/LICENSE.md"
+licenselink = "https://github.com/cubiest/hugo-invi/blob/master/LICENSE.txt"
 description = "A Hugo adaptation of the Fresh theme from CSS Ninja"
-homepage = "https://github.com/StefMa/hugo-fresh"
-tags = ["responsive", "one page", "light", "onepage", "company", "clean", "landing page"]
+homepage = "https://github.com/cubiest/hugo-invi"
+tags = ["responsive", "light", "company", "clean", "landing page"]
 features = []
-min_version = "0.45"
+min_version = "0.107"
 
 [author]
-  name = "Stefan M."
-  homepage = "https://github.com/StefMa"
+  name = "Cubiest"
+  homepage = "https://github.com/cubiest"
