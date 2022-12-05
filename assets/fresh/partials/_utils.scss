@@ -88,8 +88,8 @@ body #backtotop a {
 
 #backtotop a:after {
     outline: none;
+    font: var(--fa-font-solid);
     content: "\f106";
-    font-family: "FontAwesome";
     position: relative;
     display: block;
     top: 50%;
