@@ -16,6 +16,6 @@ params:
     buttonlink: getstarted
     image: illustrations/worker.svg
   navbar:
-  - title: GitHub
-    url: https://github.com/StefMa/hugo-fresh
-    button: true
+    - title: GitHub
+      url: https://github.com/StefMa/hugo-fresh
+      button: true

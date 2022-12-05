@@ -13,12 +13,15 @@ General Keyframes animations
 .delay-1 {
     animation-delay: .25s;
 }
+
 .delay-2 {
     animation-delay: .5s;
 }
+
 .delay-3 {
     animation-delay: .75s;
 }
+
 .delay-4 {
     animation-delay: 1s;
 }
@@ -30,18 +33,21 @@ General Keyframes animations
         transform: translate3d(20px, 0, 0);
         opacity: 0;
     }
+
     to {
         -webkit-transform: translate3d(0, 0, 0);
         transform: translate3d(0, 0, 0);
         opacity: 1;
     }
 }
+
 @-webkit-keyframes fadeInLeft {
     from {
         -webkit-transform: translate3d(20px, 0, 0);
         transform: translate3d(20px, 0, 0);
         opacity: 0;
     }
+
     to {
         -webkit-transform: translate3d(0, 0, 0);
         transform: translate3d(0, 0, 0);
@@ -65,26 +71,31 @@ General Keyframes animations
         -webkit-transform: translate3d(0, 20px, 0);
         transform: translate3d(0, 20px, 0);
     }
+
     to {
         -webkit-transform: translate3d(0, 0, 0);
         transform: translate3d(0, 0, 0);
         opacity: 1;
     }
 }
+
 @-webkit-keyframes fadeInUp {
     from {
         -webkit-transform: translate3d(0, 20px, 0);
         transform: translate3d(0, 20px, 0);
     }
+
     to {
         -webkit-transform: translate3d(0, 0, 0);
         transform: translate3d(0, 0, 0);
         opacity: 1;
     }
 }
+
 .preFadeInUp {
     opacity: 0;
 }
+
 .fadeInUp {
     opacity: 0;
     animation-name: fadeInUp;
@@ -101,8 +112,21 @@ General Keyframes animations
 }
 
 @keyframes gelatine {
-  from, to { transform: scale(1, 1); }
-  25% { transform: scale(0.9, 1.1); }
-  50% { transform: scale(1.1, 0.9); }
-  75% { transform: scale(0.95, 1.05); }
+
+    from,
+    to {
+        transform: scale(1, 1);
+    }
+
+    25% {
+        transform: scale(0.9, 1.1);
+    }
+
+    50% {
+        transform: scale(1.1, 0.9);
+    }
+
+    75% {
+        transform: scale(0.95, 1.05);
+    }
 }
