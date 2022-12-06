@@ -100,7 +100,7 @@ params:
         url: /
       - text: App settings
         url: /
-  section1:
+  section1: #Describes the second "page" which you will see when you scroll down. Currently it will have **always** three `titles`.
     title: Great power comes
     subtitle: with great responsibility
     tiles:
@@ -119,7 +119,7 @@ params:
       text: This is some explanatory text that is on two rows
       url: /
       buttonText: Get started
-  section2:
+  section2: # Shows information why someone should use this product.
     title: You're here because you want the best
     subtitle: And we know it
     features:
@@ -133,13 +133,13 @@ params:
     - title: Nomad system
       text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.
       icon: mobile-feed
-  section3:
+  section3: # Display a bright image of your product
     title: One platform
     subtitle: To rule them all
     image: illustrations/mockups/app-mockup.png
     buttonText: Get started
     buttonLink: "#"
-  section4:
+  section4: # What clients says about us.
     title: Our Clients love us!
     subtitle: Lorem ipsum sit dolor amet is a dummy text used by typography industry
     clients:
@@ -155,7 +155,7 @@ params:
       quote: Lorem ipsum dolor sit amet, elit deleniti dissentias quo eu, hinc minim appetere te usu, ea case duis scribentur has. Duo te consequat elaboraret, has quando suavitate at.
       job: HR Manager
       img: 3
-  section5: true
+  section5: true # Write us
   footer:
     # Logo (from /images/logos/___)
     logo: fresh-white-alt.svg
