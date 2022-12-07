@@ -2,6 +2,10 @@
 Section Styles
 ========================================================================== */
 
+section {
+    background-color: $white;
+}
+
 //Sections
 .section {
     &.section-light-grey {
