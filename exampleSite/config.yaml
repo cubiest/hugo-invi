@@ -1,24 +1,52 @@
-baseURL: http://something-fresh.org/
+# ------------------------------------------
+# Website Settings
+# ------------------------------------------
+baseURL: http://something-invigorating.org/
 languageCode: en-us
-title: Hugo Fresh Theme
-theme: hugo-invi
-googleAnalytics: # Put in your tracking code without quotes like this: UA-XXXXXX...
 # Disables warnings
 disableKinds:
 - taxonomy
 - taxonomyTerm
+# ------------------------------------------
+# Theme Settings
+# ------------------------------------------
+title: Hugo Invi Theme
+theme: hugo-invi
+# ------------------------------------------
+# Analytics
+# ------------------------------------------
+# Put in your tracking code without quotes like this: UA-XXXXXX...
+googleAnalytics: # Furthermore, see privacy settings further below.
+# ------------------------------------------
+# Content
+# ------------------------------------------
 markup:
   goldmark:
     renderer:
       unsafe: true # Allows you to write raw html in your md files
 
 params:
+  # ------------------------------------------
+  # SEO (serach engine optimization)
+  # ------------------------------------------
   # Open graph allows easy social sharing. If you don't want it you can set it to false or just delete the variable
   openGraph: true
   # Used as meta data; describe your site to make Google Bots happy
   description:
+  # ------------------------------------------
+  # Website Behaviour
+  # ------------------------------------------
   # Preloader ensures images are loaded before displaying to the user. If you don't want it uncomment to set it to false
   # preloader: false
+  # ------------------------------------------
+  # Font
+  # ------------------------------------------
+  font:
+    name: "Open Sans"
+    sizes: [400,600]
+  # ------------------------------------------
+  # Navigation Bar
+  # ------------------------------------------
   navbarlogo:
   # Logo (from static/images/logos/___)
     image: logos/fresh.svg
@@ -26,27 +54,6 @@ params:
     # Default width/height. Uncomment if you need to change
     # width: 112
     # height: 28
-  font:
-    name: "Open Sans"
-    sizes: [400,600]
-  hero:
-    # Main hero title
-    title: Manage. Deploy.
-    # Hero subtitle (optional)
-    subtitle: Lorem ipsum sit dolor amet is dummy text used by the typography industry
-    # Button text
-    buttontext: Get started
-    # Where the main hero button links to
-    buttonlink: "#"
-    # Hero image (from static/images/___)
-    image: illustrations/worker.svg
-    # Footer logos (from static/images/logos/clients/___.svg)
-    clientlogos:
-    - systek
-    - tribe
-    - kromo
-    - infinite
-    - gutwork
   # Customizable navbar. For a dropdown, add a "sublinks" list.
   navbar:
   - title: Features
@@ -66,6 +73,9 @@ params:
   - title: Sign up
     url: /
     button: true
+  # ------------------------------------------
+  # Sidebar
+  # ------------------------------------------
   sidebar:
     # Logo (from /images/logos/___.svg)
     logo: fresh-square
@@ -156,6 +166,9 @@ params:
       job: HR Manager
       img: 3
   section5: true # Write us
+  # ------------------------------------------
+  # Footer
+  # ------------------------------------------
   footer:
     # Logo (from /images/logos/___)
     logo: fresh-white-alt.svg
@@ -207,6 +220,30 @@ params:
           link: /blog/first
         - text: Tech articles
           link: /blog/second
+  # ------------------------------------------
+  # Landingpage
+  # ------------------------------------------
+  hero:
+    # Main hero title
+    title: Manage. Deploy.
+    # Hero subtitle (optional)
+    subtitle: Lorem ipsum sit dolor amet is dummy text used by the typography industry
+    # Button text
+    buttontext: Get started
+    # Where the main hero button links to
+    buttonlink: "#"
+    # Hero image (from static/images/___)
+    image: illustrations/worker.svg
+    # Footer logos (from static/images/logos/clients/___.svg)
+    clientlogos:
+    - systek
+    - tribe
+    - kromo
+    - infinite
+    - gutwork
+# ------------------------------------------
+# Privacy
+# ------------------------------------------
 privacy: # privacy settings: see https://gohugo.io/about/hugo-and-gdpr/#all-privacy-settings for explanation and default values
   disqus:
     disable: true
