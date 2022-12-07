@@ -4,18 +4,14 @@ Section Styles
 
 section {
     background-color: $white;
+
+    &:nth-child(odd) {
+        background-color: $section-grey;
+    }
 }
 
 //Sections
 .section {
-    &.section-light-grey {
-        background-color: $light-grey;
-    }
-
-    &.section-feature-grey {
-        background-color: $section-grey;
-    }
-
     &.section-secondary {
         background-color: $secondary;
     }
