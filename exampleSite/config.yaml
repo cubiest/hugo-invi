@@ -207,3 +207,27 @@ params:
           link: /blog/first
         - text: Tech articles
           link: /blog/second
+privacy: # privacy settings: see https://gohugo.io/about/hugo-and-gdpr/#all-privacy-settings for explanation and default values
+  disqus:
+    disable: true
+  googleAnalytics:
+    disable: true
+    anonymizeIP: true
+    respectDoNotTrack: true
+    useSessionStorage: false
+  instagram:
+    disable: true
+    simple: true
+    disableInlineCSS: true
+  twitter:
+    disable: true
+    enableDNT: true
+    simple: true
+    disableInlineCSS: true
+  vimeo:
+    disable: true
+    enableDNT: true
+    simple: true
+  youtube:
+    disable: false
+    privacyEnhanced: true
