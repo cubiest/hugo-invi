@@ -20,12 +20,6 @@ section {
         height: 75vh !important;
     }
 
-    .title,
-    .subtitle {
-        font-family: 'Open Sans', sans-serif;
-
-    }
-
     .subtitle {
         &.is-muted {
             color: $muted-grey;
@@ -37,12 +31,6 @@ section {
 .title-wrapper {
     max-width: 500px;
     margin: 0 auto;
-
-    .title,
-    .subtitle {
-        font-family: 'Open Sans', sans-serif;
-
-    }
 
     .subtitle {
         &.is-muted {
