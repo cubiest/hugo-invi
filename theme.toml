@@ -1,10 +1,17 @@
+# https://github.com/gohugoio/hugoThemesSiteBuilder#theme-configuration
 name = "Hugo Invi"
+version = "1.0"
 license = "MIT"
 licenselink = "https://github.com/cubiest/hugo-invi/blob/master/LICENSE.txt"
 description = "A Hugo adaptation of the Fresh theme from CSS Ninja"
+
 homepage = "https://github.com/cubiest/hugo-invi"
-tags = ["responsive", "light", "company", "clean", "landing page"]
+
+tags = ["responsive", "minimal", "light", "company", "clean", "landing"]
+
 features = []
+
+# minimum hugo version
 min_version = "0.107"
 
 [author]
