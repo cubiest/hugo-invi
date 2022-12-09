@@ -5,6 +5,27 @@ All notable changes to this project (since its fork) are documented in this file
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 
+## [Unreleased]
+
+### Added
+
+* support for copyright notice
+
+### Changed
+
+
+### Deprecated
+
+
+### Removed
+
+
+### Fixed
+
+
+### Security
+
+
 ## [1.0] - 2022-12-08
 
 > Basically a cleanup of hugo-fresh while preserving functionality

@@ -39,6 +39,10 @@ params:
   # Preloader ensures images are loaded before displaying to the user. If you don't want it uncomment to set it to false
   # preloader: false
   # ------------------------------------------
+  # Website Data
+  # ------------------------------------------
+  copyright: "Copyright © xxxx <Name>"
+  # ------------------------------------------
   # Navigation Bar
   # ------------------------------------------
   navbarlogo:
