@@ -5,13 +5,12 @@ All notable changes to this project (since its fork) are documented in this file
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 
-## [Unreleased]
+## [1.1] - 2022-12-10
 
 ### Added
 
 * Support for copyright notice
 * "_markup/renderer-link": adds *noopener* and *nofollow* relation to markdown links in `content/`, if external link (i.e. URL begins with "http")
-*  counterpart for shortcode **link.html**
 * Allow configuring Feature Card height
 
 ### Changed
@@ -20,17 +19,6 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
   * Breaking Change: see exampleSite/content/agb.md
 * Condense title{number}.html shortcodes
   * Breaking Change: see exampleSite/content/agb.md
-
-### Deprecated
-
-
-### Removed
-
-
-### Fixed
-
-
-### Security
 
 
 ## [1.0] - 2022-12-08
