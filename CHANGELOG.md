@@ -9,9 +9,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ### Added
 
-* support for copyright notice
-* shortcode **link.html** for `<a href>`: adds *noopener* and *nofollow* relation, if external link (i.e. URL begins with "http")
+* Support for copyright notice
+* Shortcode **link.html** for `<a href>`: adds *noopener* and *nofollow* relation, if external link (i.e. URL begins with "http")
 * "_markup/renderer-link" counterpart for shortcode **link.html**
+* Allow configuring Feature Card height
 
 ### Changed
 

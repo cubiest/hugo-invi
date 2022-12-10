@@ -14,14 +14,14 @@
       <div class="columns">
         {{- range $tiles }}
         <div class="column is-one-third">
-          <div class="feature-card is-bordered has-text-centered revealOnScroll delay-1" data-animation="fadeInLeft">
+          <div class="feature-card is-bordered height-aligned has-text-centered revealOnScroll delay-1" data-animation="fadeInLeft">
             <div class="card-title">
               <h4>{{ .title }}</h4>
             </div>
             <div class="card-icon">
               <img src="{{ printf "/images/illustrations/icons/%s.svg" .icon | relURL }}">
             </div>
-            <div class="card-text">
+            <div class="card-text height-aligned">
               <p>{{ .text }}</p>
             </div>
             <div class="card-action">
