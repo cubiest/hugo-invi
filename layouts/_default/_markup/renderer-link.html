@@ -1,2 +1,3 @@
 <!-- copy of shortcode "link" -->
-<a href="{{ .Destination }}" {{ if strings.HasPrefix .Destination "http" }}target="_blank" rel="noopener, nofollow"{{ end }}>{{ .Text }}</a>
+<a href="{{ .Destination }}" {{ if strings.HasPrefix .Destination "http" }}target="_blank" rel="noopener, nofollow" {{
+    end }}>{{ .Text }}</a>

@@ -1,2 +1,0 @@
-{{ $url := .Get 0 }}
-<a href="{{ $url }}" {{ if strings.HasPrefix $url "http" }}target="_blank" rel="noopener, nofollow"{{ end }}>{{ .Get 1 }}</a>
