@@ -3,12 +3,12 @@ title: AGB
 include_footer: true
 ---
 
-{{< title3 "§1 Lorem" >}}
+{{< title "3" "§1 Lorem" >}}
 Bacon ipsum dolor amet pig pork hamburger tenderloin burgdoggen spare ribs bacon pancetta pork loin tail turducken. Chicken pastrami jerky tongue ball tip strip steak. Ball tip alcatra turkey, cupim strip steak swine short loin tenderloin pancetta corned beef ribeye cow short ribs. Turkey turducken flank filet mignon beef ribs pastrami rump, andouille prosciutto picanha kevin strip steak. Corned beef fatback landjaeger hamburger alcatra, bacon buffalo tongue cow biltong salami sirloin swine.
 
 ---
 
-{{< title3 "§2 Bacon" >}}
+{{< title "3" "§2 Bacon" >}}
 {{< subtitle "5" "§2.1 Bacon1" >}}
 Buffalo cupim kielbasa spare ribs frankfurter. Ribeye pork burgdoggen tenderloin, tail strip steak bacon ham hock pork loin cupim. Bresaola biltong salami, cow ham hock doner pork chop bacon sausage short ribs. Picanha shank sausage turducken. Ham hock t-bone cupim, tri-tip biltong venison flank beef. Cupim bresaola kevin, ham hock beef hamburger tri-tip biltong sirloin filet mignon.
 

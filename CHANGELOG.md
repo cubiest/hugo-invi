@@ -17,6 +17,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 * Condense subtitle{number}.html shortcodes
   * Breaking Change: see exampleSite/content/agb.md
+* Condense title{number}.html shortcodes
+  * Breaking Change: see exampleSite/content/agb.md
 
 ### Deprecated
 
