@@ -15,9 +15,12 @@
   </div>
   {{ end }}
 
+  {{ partial "navbar.html" . }}
+  {{ partial "navbar-clone.html" . }}
+
   {{ block "main" . }}
 
-  {{ partial "single/single.html" . }}
+  {{ partial "single/content.html" . }}
 
   {{ if .Params.include_footer }}
   {{ partial "footer.html" . }}

@@ -1,10 +1,9 @@
-{{- $section4 := .Site.Params.section4 }}
-{{- $title    := index $section4 "title" }}
-{{- $subtitle := index $section4 "subtitle" }}
-{{- $clients  := index $section4 "clients" }}
+{{- $quoteCards := $.Param "quoteCards" }}
+{{- $title      := index $quoteCards "title" }}
+{{- $subtitle   := index $quoteCards "subtitle" }}
+{{- $cards      := index $quoteCards "clients" }}
 <section class="section is-medium section-secondary">
   <div class="container">
-
     <div class="title-wrapper has-text-centered">
       <h2 class="title is-2 light-text is-spaced">{{ $title }}</h2>
       {{- with $subtitle }}
@@ -14,7 +13,7 @@
 
     <div class="content-wrapper">
       <div class="columns is-vcentered">
-        {{- range $clients }}
+        {{- range $cards }}
         <div class="column is-4">
           <figure class="testimonial">
             <blockquote>

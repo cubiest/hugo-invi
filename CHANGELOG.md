@@ -5,6 +5,28 @@ All notable changes to this project (since its fork) are documented in this file
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 
+## [2.0] - xxxx-xx-xx
+
+### Added
+
+
+### Changed
+
+* Landing page site data (previously in config.yaml) is now defined in website's index.md file's front matter (i.e. SITE-variables were changed to PAGE-varibles).
+
+### Deprecated
+
+
+### Removed
+
+
+### Fixed
+
+
+### Security
+
+
+
 ## [1.1] - 2022-12-10
 
 ### Added

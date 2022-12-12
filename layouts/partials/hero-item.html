@@ -1,9 +1,9 @@
-{{- $section3 := .Site.Params.section3 }}
-{{- $title := index $section3 "title" }}
-{{- $subtitle := index $section3 "subtitle" }}
-{{- $image := index $section3 "image" }}
-{{- $buttonText := index $section3 "buttontext" }}
-{{- $buttonLink := index $section3 "buttonlink" }}
+{{- $heroItem   := $.Param "heroItem" }}
+{{- $title      := index $heroItem "title" }}
+{{- $subtitle   := index $heroItem "subtitle" }}
+{{- $image      := index $heroItem "image" }}
+{{- $buttonText := index $heroItem "buttontext" }}
+{{- $buttonLink := index $heroItem "buttonlink" }}
 <section class="section is-medium">
   <div class="container">
     <div class="columns">
