@@ -1,5 +1,5 @@
-{{- $hero := .Site.Params.hero }}
-{{- $clientLogos := index $hero "clientlogos" }}
+{{- $hero        := $.Param.hero }}
+{{- $clientLogos := index $hero "clientLogos" }}
 <div class="hero-foot mb-20">
   <div class="container">
     <div class="tabs is-centered">
