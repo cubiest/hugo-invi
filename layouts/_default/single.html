@@ -22,7 +22,7 @@
 
   {{ partial "single/content.html" . }}
 
-  {{ if .Params.include_footer }}
+  {{ if .Site.Params.footer }}
   {{ partial "footer.html" . }}
   {{ end }}
 

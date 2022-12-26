@@ -1,6 +1,5 @@
 ---
 title: AGB
-include_footer: true
 ---
 
 {{< title "3" "§1 Lorem" >}}
