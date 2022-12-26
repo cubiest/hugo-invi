@@ -1,8 +1,8 @@
 {{- $hero        := $.Param.hero }}
 {{- $title       := index $hero "title" }}
 {{- $subtitle    := index $hero "subtitle" }}
-{{- $buttonText  := index $hero "buttontext" }}
-{{- $buttonLink  := index $hero "buttonlink" }}
+{{- $buttonText  := index $hero "buttonText" }}
+{{- $buttonUrl   := index $hero "buttonUrl" }}
 {{- $image       := index $hero "image" }}
 {{- $clientLogos := index $hero "clientLogos" }}
 <section class="hero is-fullheight is-default is-bold">
@@ -19,7 +19,7 @@
           </h2>
           {{ end }}
           <p>
-            <a class="button cta rounded primary-btn raised" href="{{ $buttonLink }}">
+            <a class="button cta rounded primary-btn raised" href="{{ $buttonUrl | absLangURL }}">
               {{ $buttonText }}
             </a>
           </p>
