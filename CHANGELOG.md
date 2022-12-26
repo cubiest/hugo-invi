@@ -24,6 +24,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ### Removed
 
+* Remove site param `include_footer` from front matter; show footer at all times.
 
 ### Fixed
 
@@ -31,7 +32,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ### Security
 
-
+* Add `noopener, nofollow` for offsite URLs.
 
 ## [1.1] - 2022-12-10
 
