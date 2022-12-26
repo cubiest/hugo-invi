@@ -5,14 +5,19 @@ All notable changes to this project (since its fork) are documented in this file
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 
-## [2.0] - xxxx-xx-xx
+## [2.0] - 2022-12-xx
 
 ### Added
 
+* Localization support
+  * in config.yaml: navbar, sidebar, footer.
+  * in landing page.
 
 ### Changed
 
 * Landing page site data (previously in config.yaml) is now defined in website's index.md file's front matter (i.e. SITE-variables were changed to PAGE-varibles).
+* All URLs are expected to be internal and respect the user's currently selected language; except for cases where external URLs are expected, e.g. for social media.
+* Property names are called "name" instead of "title", if they represent e.g. menu options in the navbar exactly that; and not "link", which is the element
 
 ### Deprecated
 
@@ -22,6 +27,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ### Fixed
 
+* Property names are called "url", if they are exactly that; and not "link", which is the element.
 
 ### Security
 

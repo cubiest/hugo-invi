@@ -85,6 +85,20 @@
         </a>
         {{- end }}
         {{- end }}
+
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link">
+            {{ .Site.Language.LanguageName }}
+          </a>
+
+          <div class="navbar-dropdown">
+            {{- range .Page.AllTranslations }}
+            <a href="{{ .Permalink }}" class="navbar-item">
+              {{ .Language.LanguageName }}
+            </a>
+            {{- end }}
+          </div>
+        </div>
       </div>
     </div>
   </div>
