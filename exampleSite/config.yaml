@@ -289,6 +289,7 @@ params:
   # ------------------------------------------
   # SEO (serach engine optimization)
   # ------------------------------------------
+  site_name: "My Site" # or company name
   # Open graph allows easy social sharing. If you don't want it you can set it to false or just delete the variable
   openGraph: true
   # ------------------------------------------

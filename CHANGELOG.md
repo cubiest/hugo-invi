@@ -12,6 +12,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 * Localization support
   * in config.yaml: navbar, sidebar, footer.
   * in landing page.
+* SEO meta support for
+  * OpenGraph
 
 ### Changed
 
