@@ -5,9 +5,9 @@ hero:
   # Hero subtitle (optional)
   subtitle: Lorem ipsum sit dolor amet is dummy text used by the typography industry
   # Button text
-  buttontext: Get started
+  buttonText: Get started
   # Where the main hero button links to
-  buttonlink: "#"
+  buttonUrl: "#"
   # Hero image (from static/images/___)
   image: illustrations/worker.svg
   # Footer logos (from static/images/logos/clients/___.svg)
@@ -55,7 +55,7 @@ heroItem: # Display a bright image of your product
   subtitle: To rule them all
   image: illustrations/mockups/app-mockup.png
   buttonText: Get started
-  buttonLink: "#"
+  buttonUrl: "#"
 quoteCards: # What clients says about us.
   title: Our Clients love us!
   subtitle: Lorem ipsum sit dolor amet is a dummy text used by typography industry

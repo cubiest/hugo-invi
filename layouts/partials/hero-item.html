@@ -2,8 +2,8 @@
 {{- $title      := index $heroItem "title" }}
 {{- $subtitle   := index $heroItem "subtitle" }}
 {{- $image      := index $heroItem "image" }}
-{{- $buttonText := index $heroItem "buttontext" }}
-{{- $buttonLink := index $heroItem "buttonlink" }}
+{{- $buttonText := index $heroItem "buttonText" }}
+{{- $buttonUrl  := index $heroItem "buttonUrl" }}
 <section class="section is-medium">
   <div class="container">
     <div class="columns">
@@ -20,7 +20,7 @@
     </div>
 
     <p class="has-text-centered mt-20">
-      <a class="button cta is-large rounded secondary-btn raised" href="{{ $buttonLink }}">
+      <a class="button cta is-large rounded secondary-btn raised" href="{{ $buttonUrl | absLangURL }}">
         {{ $buttonText }}
       </a>
     </p>

@@ -1,7 +1,7 @@
 {{- $navbar           := .Site.Params.navbar }}
 {{- $sidebarVisible   := .Site.Params.sidebar }}
 {{ if .Params.sidebar }}
-{{ $sidebarVisible = .Params.sidebar }}
+{{ $sidebarVisible    = .Params.sidebar }}
 {{ end }}
 {{- $navbarLogo       := .Site.Params.navbarlogo }}
 {{- $navbarLogoWidth  := .Site.Params.navbarlogo.width | default 112 }}
@@ -10,7 +10,7 @@
   <div class="container">
     <div class="navbar-brand">
       {{- if $navbarLogo}}
-      <a class="navbar-item" href="{{ $navbarLogo.link }}">
+      <a class="navbar-item" href="{{ $navbarLogo.url | absLangURL }}">
         <img src="{{ printf "/images/%s" $navbarLogo.image | relURL }}" alt="" width="{{ $navbarLogoWidth }}"
           height="{{ $navbarLogoHeight }}">
       </a>
@@ -62,29 +62,43 @@
         {{- if .sublinks }}
         <div class="navbar-item has-dropdown is-hoverable">
           <a class="navbar-link">
-            {{ .title }}
+            {{ .name }}
           </a>
 
           <div class="navbar-dropdown">
             {{- range .sublinks }}
-            <a href="{{ .url }}" class="navbar-item">
-              {{ .title }}
+            <a href="{{ .url | absLangURL }}" class="navbar-item">
+              {{ .name }}
             </a>
             {{- end }}
           </div>
         </div>
         {{- else if .button }}
-        <a href="{{ .url }}" class="navbar-item">
+        <a href="{{ .url | absLangURL }}" class="navbar-item">
           <span class="button signup-button rounded secondary-btn raised">
-            {{ .title }}
+            {{ .name }}
           </span>
         </a>
         {{- else }}
-        <a href="{{ .url }}" class="navbar-item is-secondary">
-          {{ .title }}
+        <a href="{{ .url | absLangURL }}" class="navbar-item is-secondary">
+          {{ .name }}
         </a>
         {{- end }}
         {{- end }}
+
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link">
+            {{ .Site.Language.LanguageName }}
+          </a>
+
+          <div class="navbar-dropdown">
+            {{- range .Page.AllTranslations }}
+            <a href="{{ .Permalink }}" class="navbar-item">
+              {{ .Language.LanguageName }}
+            </a>
+            {{- end }}
+          </div>
+        </div>
       </div>
     </div>
   </div>

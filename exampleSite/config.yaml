@@ -24,15 +24,259 @@ markup:
   goldmark:
     renderer:
       unsafe: true # Allows you to write raw html in your md files
-
+# ------------------------------------------
+# Site Params by Language
+# ------------------------------------------
+# Main Configuration
+defaultContentLanguage: en
+defaultContentLanguageInSubdir: true
+languages:
+  en:
+    weight: 1 # highest priority
+    languageName: English
+    languageCode: en-us
+    # ------------------------------------------
+    # SEO (serach engine optimization)
+    # ------------------------------------------
+    # Used as meta data; describe your site to make Search Engine Bots happy
+    description:
+    # ------------------------------------------
+    # Navigation Bar
+    # ------------------------------------------
+    # Customizable navbar. For a dropdown, add a "sublinks" list.
+    navbar:
+    - name: Features
+      url: /
+    - name: Pricing
+      url: /
+    - name: Dropdown
+      sublinks:
+      - name: Dropdown item
+        url: /
+      - name: Dropdown item
+        url: /
+      - name: Dropdown item
+        url: /
+    - name: Log in
+      url: /
+    - name: Sign up
+      url: /
+      button: true
+    # ------------------------------------------
+    # Sidebar
+    # ------------------------------------------
+    sidebar:
+      # Logo (from /images/logos/___.svg)
+      logo: fresh-square
+      sections:
+      - title: User
+        icon: user
+        links:
+        - text: Profile
+          url: /
+        - text: Account
+          url: /
+        - text: Settings
+          url: /
+      - title: Messages
+        icon: envelope
+        links:
+        - text: Inbox
+          url: /
+        - text: Compose
+          url: /
+      - title: Images
+        icon: image
+        links:
+        - text: Library
+          url: /
+        - text: Upload
+          url: /
+      - title: Settings
+        icon: cog
+        links:
+        - text: User settings
+          url: /
+        - text: App settings
+          url: /
+    # ------------------------------------------
+    # Footer
+    # ------------------------------------------
+    footer:
+      # Logo (from /images/logos/___)
+      logo: fresh-white-alt.svg
+      # Social Media Title
+      socialmediatitle: Follow Us
+      # Social media links (GitHub, Twitter, etc.). All are optional.
+      # Icons are from Font Awesome
+      socialmedia:
+      - url: https://github.com/lucperkins/github-fresh
+        icon: github
+      - url: https://dribbble.com/#
+        icon: dribbble
+      - url: https://facebook.com/#
+        icon: facebook
+      - url: https://twitter.com/lucperkins
+        icon: twitter
+      - url: https://bitbucket.org/#
+        icon: bitbucket
+      bulmalogo: true
+      # quicklinks expects internal urls, i.e. it uses `absLangURL`
+      quicklinks:
+        column1:
+          title: "Product"
+          links:
+          - text: Discover features
+            url: /
+          - text: Why choose our product?
+            url: /
+          - text: Compare features
+            url: /
+          - text: Our roadmap
+            url: /
+          - text: Terms of Service
+            url: /agb
+        column2:
+          title: "Docs"
+          links:
+          - text: Get started
+            url: /
+          - text: User guides
+            url: /
+          - text: Admin guide
+            url: /
+          - text: Developers
+            url: /
+        column3:
+          title: "Blog"
+          links:
+          - text: Latest news
+            url: /blog/first
+  de:
+    weight: 2
+    languageName: Deutsch
+    languageCode: de-de
+    # ------------------------------------------
+    # SEO (serach engine optimization)
+    # ------------------------------------------
+    # Used as meta data; describe your site to make Search Engine Bots happy
+    description:
+    # ------------------------------------------
+    # Navigation Bar
+    # ------------------------------------------
+    # Customizable navbar. For a dropdown, add a "sublinks" list.
+    navbar:
+    - name: Funktionen
+      url: /
+    - name: Preise
+      url: /
+    - name: Dropdown
+      sublinks:
+      - name: Artikel 1
+        url: /
+      - name: Artikel 2
+        url: /
+      - name: Artikel 3
+        url: /
+    - name: Log-in
+      url: /
+    - name: Anmelden
+      url: /
+      button: true
+    # ------------------------------------------
+    # Sidebar
+    # ------------------------------------------
+    sidebar:
+      # Logo (from /images/logos/___.svg)
+      logo: fresh-square
+      sections:
+      - title: Benutzer
+        icon: user
+        links:
+        - text: Profil
+          url: /
+        - text: Konto
+          url: /
+        - text: Einstellungen
+          url: /
+      - title: Nachrichten
+        icon: envelope
+        links:
+        - text: Eingang
+          url: /
+        - text: Verfassen
+          url: /
+      - title: Bilder
+        icon: image
+        links:
+        - text: Bibliothek
+          url: /
+        - text: Onlinespeicher
+          url: /
+      - title: Einstellungen
+        icon: cog
+        links:
+        - text: Benutzer
+          url: /
+        - text: Software
+          url: /
+    # ------------------------------------------
+    # Footer
+    # ------------------------------------------
+    footer:
+      # Logo (from /images/logos/___)
+      logo: fresh-white-alt.svg
+      # Social Media Title
+      socialmediatitle: Folge Uns
+      # Social media links (GitHub, Twitter, etc.). All are optional.
+      # Icons are from Font Awesome
+      socialmedia:
+      - url: https://github.com/lucperkins/github-fresh
+        icon: GitHub
+      - url: https://facebook.com/#
+        icon: Facebook
+      - url: https://dribbble.com/#
+        icon: Dribbble
+      - url: https://twitter.com/lucperkins
+        icon: Twitter
+      - url: https://bitbucket.org/#
+        icon: Bitbucket
+      bulmalogo: true
+      # quicklinks expects internal urls, i.e. it uses `absLangURL`
+      quicklinks:
+        column1:
+          title: "Produkt"
+          links:
+          - text: Funktionen entdecken
+            url: /
+          - text: Warum unser Produkt?
+            url: /
+          - text: Funktionen im Vergleich
+            url: /
+          - text: Roadmap
+            url: /
+          - text: AGB
+            url: /agb
+        column2:
+          title: "Dokumentation"
+          links:
+          - text: Einstieg
+            url: /
+          - text: für Benutzer
+            url: /
+          - text: für Admins
+            url: /
+          - text: für Entwickler
+            url: /
+        column3:
+          title: "Blog"
+          links:
+          - text: Neuigkeiten
+            url: /blog/first
+# ------------------------------------------
+# Generic Site Params
+# ------------------------------------------
 params:
-  # ------------------------------------------
-  # SEO (serach engine optimization)
-  # ------------------------------------------
-  # Open graph allows easy social sharing. If you don't want it you can set it to false or just delete the variable
-  openGraph: true
-  # Used as meta data; describe your site to make Google Bots happy
-  description:
   # ------------------------------------------
   # Website Behaviour
   # ------------------------------------------
@@ -43,125 +287,20 @@ params:
   # ------------------------------------------
   copyright: "Copyright © xxxx <Name>"
   # ------------------------------------------
+  # SEO (serach engine optimization)
+  # ------------------------------------------
+  # Open graph allows easy social sharing. If you don't want it you can set it to false or just delete the variable
+  openGraph: true
+  # ------------------------------------------
   # Navigation Bar
   # ------------------------------------------
   navbarlogo:
   # Logo (from static/images/logos/___)
     image: logos/fresh.svg
-    link: /
+    url: /
     # Default width/height. Uncomment if you need to change
     # width: 112
     # height: 28
-  # Customizable navbar. For a dropdown, add a "sublinks" list.
-  navbar:
-  - title: Features
-    url: /
-  - title: Pricing
-    url: /
-  - title: Dropdown
-    sublinks:
-    - title: Dropdown item
-      url: /
-    - title: Dropdown item
-      url: /
-    - title: Dropdown item
-      url: /
-  - title: Log in
-    url: /
-  - title: Sign up
-    url: /
-    button: true
-  # ------------------------------------------
-  # Sidebar
-  # ------------------------------------------
-  sidebar:
-    # Logo (from /images/logos/___.svg)
-    logo: fresh-square
-    sections:
-    - title: User
-      icon: user
-      links:
-      - text: Profile
-        url: /
-      - text: Account
-        url: /
-      - text: Settings
-        url: /
-    - title: Messages
-      icon: envelope
-      links:
-      - text: Inbox
-        url: /
-      - text: Compose
-        url: /
-    - title: Images
-      icon: image
-      links:
-      - text: Library
-        url: /
-      - text: Upload
-        url: /
-    - title: Settings
-      icon: cog
-      links:
-      - text: User settings
-        url: /
-      - text: App settings
-        url: /
-  # ------------------------------------------
-  # Footer
-  # ------------------------------------------
-  footer:
-    # Logo (from /images/logos/___)
-    logo: fresh-white-alt.svg
-    # Social Media Title
-    socialmediatitle: Follow Us
-    # Social media links (GitHub, Twitter, etc.). All are optional.
-    socialmedia:
-    - link: https://github.com/lucperkins/github-fresh
-      # Icons are from Font Awesome
-      icon: github
-    - link: https://dribbble.com/#
-      icon: dribbble
-    - link: https://facebook.com/#
-      icon: facebook
-    - link: https://twitter.com/lucperkins
-      icon: twitter
-    - link: https://bitbucket.org/#
-      icon: bitbucket
-    bulmalogo: true
-    quicklinks:
-      column1:
-        title: "Product"
-        links:
-        - text: Discover features
-          link: /
-        - text: Why choose our product?
-          link: /
-        - text: Compare features
-          link: /
-        - text: Our roadmap
-          link: /
-        - text: AGB
-          link: /agb
-      column2:
-        title: "Docs"
-        links:
-        - text: Get started
-          link: /
-        - text: User guides
-          link: /
-        - text: Admin guide
-          link: /
-        - text: Developers
-          link: /
-      column3:
-        title: "Blog"
-        links:
-        - text: Latest news
-          link: /blog/first
-        - text: Tech articles
-          link: /blog/second
 # ------------------------------------------
 # Privacy
 # ------------------------------------------
