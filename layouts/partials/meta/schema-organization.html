@@ -1,0 +1,32 @@
+{{ if .IsHome }}
+{{ if .Site.Params.schema.organization }}
+{{- $logo := (print "/images/" .Site.Params.navbarlogo.image) }}
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "{{ .Site.Params.site_name }}",
+    "url": "{{ .Permalink }}",
+    {{ with .Site.Params.schema.organization }}
+    "logo": {
+        "@type": "ImageObject",
+        "url": "{{ $logo }}",
+        "width": {{ .icon_width }},
+        "height": {{ .icon_height }}
+    },
+    {{ if .sameAs }}
+    "sameAs": [
+        {{ range .sameAs }}"{{ . }}",
+        {{ end }}
+    ],
+    {{ end }}
+    {{ if .keywords }}
+    "keywords": [
+        {{ range .keywords }}"{{ . }}",
+        {{ end }}
+    ]
+    {{ end }}
+    {{ end }}
+}</script>
+{{ end }}
+{{ end }}
