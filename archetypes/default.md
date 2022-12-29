@@ -1,6 +1,6 @@
 ---
-title: ""
-seo_title: "" # alternative title text to be used in HTML's header-title
+title: "" # used as title in respective page and used in HTML's header-title, IF seo_title is undefined
+seo_title: "" # alternative title text to be used in HTML's header-title only
 draft: true
 sidebar: true # if `true`, show sidebar, else hide
 sidebarlogo: fresh # From (static/images/logos/)
