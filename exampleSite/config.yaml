@@ -40,6 +40,16 @@ languages:
     # ------------------------------------------
     # Used as meta data; describe your site to make Search Engine Bots happy
     description:
+    schema:
+      organization:
+        icon_width: 420
+        icon_height: 420
+        sameAs:
+          - "https://twitter.com/test"
+        keywords:
+          - "XXX Software"
+          - "Software Name"
+          - "Main Feature X"
     # ------------------------------------------
     # Navigation Bar
     # ------------------------------------------
@@ -161,6 +171,16 @@ languages:
     # ------------------------------------------
     # Used as meta data; describe your site to make Search Engine Bots happy
     description:
+    schema:
+      organization:
+        icon_width: 420
+        icon_height: 420
+        sameAs:
+          - "https://twitter.com/test"
+        keywords:
+          - "XXX Software"
+          - "Software Name"
+          - "Hauptfunktion X"
     # ------------------------------------------
     # Navigation Bar
     # ------------------------------------------
@@ -289,8 +309,10 @@ params:
   # ------------------------------------------
   # SEO (serach engine optimization)
   # ------------------------------------------
+  site_name: "My Site" # or company name
   # Open graph allows easy social sharing. If you don't want it you can set it to false or just delete the variable
   openGraph: true
+  twitter_site_handle: "@test"
   # ------------------------------------------
   # Navigation Bar
   # ------------------------------------------

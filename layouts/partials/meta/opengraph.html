@@ -1,0 +1,14 @@
+{{ if .Params.content_type }}<meta property="og:type" content="{{ .Params.content_type }}" />{{ end }}
+{{ with .Params.description }}<meta property="og:description" content="{{ . }}" />{{ end }}
+<meta property="og:title" content="{{ .Title }}" />
+<meta property="og:site_name" content="{{ .Site.Params.site_name }}" />
+{{ with .Params.images }}
+{{ range first 4 . }}<meta property="og:image" content="{{ . }}" />{{ end }}
+{{ end }}
+<meta property="og:url" content="{{ .Permalink }}">
+{{ if .Params.locale }}
+<meta property="og:locale" content="{{ .Params.locale }}">
+{{ else if .Site.Params.Locale }}
+<meta property="og:locale" content="{{ .Site.Params.Locale }}">
+{{ end }}
+<meta property="og:updated_time" content="{{ .Date.Format " 2006-01-02" }}"/>

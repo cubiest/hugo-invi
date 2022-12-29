@@ -1,9 +1,21 @@
-{{ template "_internal/google_analytics_async.html" . }}
+<meta name="HandheldFriendly" content="True" />
+<meta name="MobileOptimized" content="320" />
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1" />
+
 {{ if eq .Site.Params.openGraph true }}
-{{ template "_internal/opengraph.html" . }}
+{{ partial "meta/opengraph.html" . }}
+{{ else }}
+<!-- if NO open graph start -->
+{{ if .Params.description }}
+<meta name="description" content="{{ .Params.description }}" />
+{{ else if .Site.Params.Description }}
+<meta name="description" content="{{ .Site.Params.Description }}" />
 {{ end }}
-<meta name="description"
-    content="{{ if .Params.summary }}{{ .Params.summary }}{{ else if .Site.Params.Description }}{{ .Site.Params.Description }}{{ else }}Hardcoded description; the author should update :){{ end }}" />
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta http-equiv="x-ua-compatible" content="ie=edge">
+<!-- if NO open graph end -->
+{{ end }}
+
+{{ partial "meta/twitter.html" . }}
+
+{{ partial "meta/schema-organization.html" . }}

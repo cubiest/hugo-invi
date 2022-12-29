@@ -12,6 +12,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 * Localization support
   * in config.yaml: navbar, sidebar, footer.
   * in landing page.
+* SEO meta support for
+  * OpenGraph
+  * Twitter
+  * Schema
+    * Organization
 
 ### Changed
 
@@ -24,6 +29,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ### Removed
 
+* Site param `include_footer` from front matter; show footer at all times.
 
 ### Fixed
 
@@ -31,6 +37,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ### Security
 
+* Add `noopener, nofollow` for offsite URLs.
 
 
 ## [1.1] - 2022-12-10

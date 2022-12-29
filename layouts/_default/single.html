@@ -3,7 +3,7 @@
 
 <head>
   {{ partial "meta.html" . }}
-  <title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
+  <title>{{ if .Params.seo_title }}{{ .Params.seo_title }}{{ else if .Params.title }}{{ .Params.title }}{{ else if .Site.Params.Title }}{{ .Site.Params.Title }}{{ end }}</title>
   {{ partial "css.html" . }}
 </head>
 
@@ -22,7 +22,7 @@
 
   {{ partial "single/content.html" . }}
 
-  {{ if .Params.include_footer }}
+  {{ if .Site.Params.footer }}
   {{ partial "footer.html" . }}
   {{ end }}
 
