@@ -7,7 +7,7 @@ description = "A Hugo adaptation of the Fresh theme from CSS Ninja"
 
 homepage = "https://github.com/cubiest/hugo-invi"
 
-tags = ["responsive", "minimal", "light", "company", "clean", "multilingual"]
+tags = ["responsive", "minimal", "light", "company", "clean", "multilingual", "gallery"]
 
 features = []
 
