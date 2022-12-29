@@ -1,0 +1,16 @@
+<!--Twitter Cards start-->
+{{ if eq .Params.twitter.disable false }}
+<!-- NOTE: Twitter falls back to open graph for the rest: "og:title, og:description" -->
+<!-- NOTE: first image is used for card type "summary_large_image" -->
+{{ with .Site.twitter_site_handle }}<meta name="twitter:site" content="{{ . }}" />{{ end }}
+{{ with .Params.twitter.card_type }}<meta name="twitter:card" content="{{ . }}" />{{ end }}
+{{ with .Params.twitter.author_handle }}<meta name="twitter:creator" content="{{ . }}" />{{ end }}
+<!-- twitter image start -->
+{{ if eq .Params.twitter.card_type "summary_large_image" }}
+{{ with .Params.images }}
+{{ index . 0 }}<meta property="twitter:image" content="{{ . }}" />
+{{ end }}
+{{ end }}
+<!-- twitter image end -->
+{{ end }}
+<!--Twitter Cards end-->
