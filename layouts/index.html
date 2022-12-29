@@ -12,6 +12,10 @@
 {{ partial "feature-highlights.html" . }}
 {{ end }}
 
+{{ if $.Param "gallery" }}
+{{ partial "gallery.html" . }}
+{{ end }}
+
 {{ if $.Param.heroItem }}
 {{ partial "hero-item.html" . }}
 {{ end }}
