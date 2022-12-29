@@ -1,11 +1,16 @@
 ---
-title: ""
-seo_title: "" # alternative title text to be used in HTML's header-title
+title: "" # used as title in respective page and used in HTML's header-title, IF seo_title is undefined
+seo_title: "" # alternative title text to be used in HTML's header-title only
 draft: true
 sidebar: true # if `true`, show sidebar, else hide
 sidebarlogo: fresh # From (static/images/logos/)
 images: # first one is referenced in Twitter SEO meta of card type "summary_large_image"; first 4 in OpenGraph SEO meta
   - "path/to/image.png"
+gallery: # images in a gallery; ignored by meta data
+  - f_name: "0.jpg" # must be in assets/images/
+    thumb_name: "0_t.jpg" # must be in assets/thumbnails/
+    cropped: true # optional
+    alt: "" # optional, but you should add an alternative text
 # seo-meta
 description: "Your description"
 # robots: "" # default values by search engines: "index, follow", use e.g. "noindex" to change behaviour

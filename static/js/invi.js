@@ -1,3 +1,6 @@
+import PhotoSwipeLightbox from '../modules/photoswipe/photoswipe-lightbox.esm.min.js'; // also imports core
+import PhotoSwipe from '../modules/photoswipe/photoswipe.esm.min.js';
+
 //Preloader
 $(window).on('load', function () { // makes sure the whole site is loaded 
     $('#status').fadeOut(); // will first fade out the loading animation 
@@ -6,10 +9,17 @@ $(window).on('load', function () { // makes sure the whole site is loaded
 })
 
 $(document).ready(function () {
+    // Initialize image gallery
+    const lightbox = new PhotoSwipeLightbox({
+        gallery: '#invi-gallery',
+        children: 'a',
+        pswpModule: PhotoSwipe,
+    });
+    lightbox.init();
+
     //Mobile menu toggle
     if ($('.navbar-burger').length) {
         $('.navbar-burger').on("click", function () {
-
             var menu_id = $(this).attr('data-target');
             $(this).toggleClass('is-active');
             $("#" + menu_id).toggleClass('is-active');

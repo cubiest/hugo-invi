@@ -1,0 +1,24 @@
+<!-- gallery images are defined in the front matter as a list and its functionality is implemented by PhotoSwipe -->
+{{- $gallery := .Params.gallery }}
+<div class="pswp-gallery" id="invi-gallery">
+    {{- range $gallery }}
+    {{ $src_image := resources.Get(print "images/" .f_name) }}
+    {{ $t_image := resources.Get(print "thumbnails/" .thumb_name) }}
+    <a
+      href="{{ $src_image.RelPermalink }}"
+      data-pswp-width="{{ $src_image.Width }}"
+      data-pswp-height="{{ $src_image.Height }}"
+      {{- if .cropped }}
+      data-cropped="{{ .cropped }}"
+      {{- end }}
+      target="_blank"
+    >
+      <img
+        src="{{ $t_image.RelPermalink }}"
+        {{- if .alt }}
+        alt="{{ .alt }}"
+        {{- end }}
+      />
+    </a>
+    {{- end }}
+</div>
