@@ -10,6 +10,30 @@ $(window).on('load', function () { // makes sure the whole site is loaded
 })
 
 $(document).ready(function () {
+    // Handle Website Cookies
+    {
+        var notification = $('.cookie-notification');
+        if (notification.length) {
+            var allow_other_cookies = Cookies.get("allow-nonfunctional-website-cookies");
+            if (allow_other_cookies === null || typeof allow_other_cookies === "undefined") {
+                // TODO: change html.background-color to `whitesmoke`
+            } else {
+                notification.style.display = "none";
+            }
+        }
+
+        if ($('#decline-cookies').length) {
+            $('#decline-cookies').on("click", function () {
+                handleWebsiteCookies(false);
+            }, false);
+        }
+        if ($('#accept-cookies').length) {
+            $('#accept-cookies').on("click", function () {
+                handleWebsiteCookies(true);
+            }, true);
+        }
+    }
+
     // Initialize image gallery
     const lightbox = new PhotoSwipeLightbox({
         gallery: '#invi-gallery',
@@ -45,6 +69,10 @@ $(document).ready(function () {
                 var video_id = getVideoID();
                 appendVideo(video_id);
             }
+        }
+
+        if ($('.show-video').length) {
+            $('.show-video').on("click", acceptCookiesAndShowYouTubeVideo, false);
         }
     }
 
@@ -181,9 +209,23 @@ $(document).ready(function () {
 })
 
 /**
- * AcceptCookiesAndShowYouTubeVideo user clicked on youtube cookie consent button beneath video placeholder.
+ * handleWebsiteCookies saves user preferences regarding saving cookies.
+ * @return {boolean} whether to accept cookies beyond the necessary functional ones.
  */
-export function AcceptCookiesAndShowYouTubeVideo() {
+function handleWebsiteCookies(accept) {
+    Cookies.set("allow-nonfunctional-website-cookies", accept, { expires: 730 }); // i.e. in 2 years
+
+    var notification = $("#cookie-notification");
+    if (notification.length) {
+        notification.style.display = "none";
+    }
+    // TODO: change html.background-color to `#444F60`
+}
+
+/**
+ * acceptCookiesAndShowYouTubeVideo user clicked on youtube cookie consent button beneath video placeholder.
+ */
+function acceptCookiesAndShowYouTubeVideo() {
     Cookies.set("allow-youtube-cookies", true, { expires: 730 }); // i.e. in 2 years
 
     // hide consent notification

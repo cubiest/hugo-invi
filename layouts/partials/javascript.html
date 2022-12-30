@@ -1,13 +1,3 @@
 <script src={{ "modules/jquery-3.6.1.min.js" | relURL }}></script>
-<script type="module" src="{{ "js/invi.js" | relURL }}"></script>
+<script type="module" src="{{ " js/invi.js" | relURL }}"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
-
-{{ with .Params.video }}
-<script type="module">
-    import * as Main from "/scripts/invi.js";
-    var first_video = document.querySelector(".show-video");
-    if (first_video !== null && typeof first_video !== "undefined") {
-        first_video.addEventListener("click", Main.AcceptCookiesAndShowYouTubeVideo, false);
-    }
-</script>
-{{ end }}
