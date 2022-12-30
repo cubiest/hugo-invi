@@ -11,6 +11,11 @@ gallery: # images in a gallery; ignored by meta data
     thumb_name: "0_t.jpg" # must be in assets/thumbnails/
     cropped: true # optional
     alt: "" # optional, but you should add an alternative text
+video:
+  title: 
+  videoID: 
+  videoURL: "https://www.youtube.com/watch?v="
+  thumbnailURL: "t.jpg" # if url does not start with "http", then it searches in assets/thumbnail
 # seo-meta
 description: "Your description"
 # robots: "" # default values by search engines: "index, follow", use e.g. "noindex" to change behaviour

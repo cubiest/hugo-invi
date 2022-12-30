@@ -36,6 +36,11 @@ detailCards: # Currently it will have **always** three `titles`.
     text: This is some explanatory text that is on two rows
     url: /
     buttonText: Get started
+video:
+  title: test-video
+  videoID: kHpXle4NqWI
+  videoURL: "https://www.youtube.com/watch?v=kHpXle4NqWI"
+  thumbnailURL: "toons.jpg"
 featureHighlights: # Shows information why someone should use this product.
   title: You're here because you want the best
   subtitle: And we know it
