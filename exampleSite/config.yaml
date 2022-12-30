@@ -36,6 +36,14 @@ languages:
     languageName: English
     languageCode: en-us
     # ------------------------------------------
+    # Video - accept 3rd party cookies
+    # ------------------------------------------
+    video:
+      infoRequired: "Playing YouTube videos requires you to accept their cookies."
+      showAccept: "Accept cookies & Show video"
+      directLink: "Open in new Tab"
+      cookiePreferences: "Show cookie preferences"
+    # ------------------------------------------
     # SEO (serach engine optimization)
     # ------------------------------------------
     # Used as meta data; describe your site to make Search Engine Bots happy
@@ -166,6 +174,14 @@ languages:
     weight: 2
     languageName: Deutsch
     languageCode: de-de
+    # ------------------------------------------
+    # Video - accept 3rd party cookies
+    # ------------------------------------------
+    video:
+      infoRequired: "Das Abspielen von YouTube Videos erfordert, dass Sie deren Cookies akzeptieren."
+      showAccept: "Cookies akzeptieren & Video anzeigen"
+      directLink: "Im neuen Tab öffnen"
+      cookiePreferences: "Öffne die Cookie Einstellungen"
     # ------------------------------------------
     # SEO (serach engine optimization)
     # ------------------------------------------

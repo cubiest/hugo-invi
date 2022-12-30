@@ -21,6 +21,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
   * page param "seo_title"
 * Default Archetype
 * Image Gallery support
+* YouTube Video support
 
 
 ### Changed
