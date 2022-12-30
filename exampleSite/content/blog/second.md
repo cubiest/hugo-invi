@@ -4,5 +4,5 @@ sidebar: true
 sidebarlogo: fresh-white-alt
 ---
 
-{{< title "2" "My awesome blogpost" >}}
+{{< title lvl="2" text="My awesome blogpost" >}}
 My super sweet second blog post

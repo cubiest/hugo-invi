@@ -12,25 +12,25 @@ $(window).on('load', function () { // makes sure the whole site is loaded
 $(document).ready(function () {
     // Handle Website Cookies
     {
-        var notification = $('.cookie-notification');
+        var notification = $('#cookie-notification');
         if (notification.length) {
             var allow_other_cookies = Cookies.get("allow-nonfunctional-website-cookies");
             if (allow_other_cookies === null || typeof allow_other_cookies === "undefined") {
                 // TODO: change html.background-color to `whitesmoke`
             } else {
-                notification.style.display = "none";
+                notification.hide();
             }
         }
 
         if ($('#decline-cookies').length) {
             $('#decline-cookies').on("click", function () {
                 handleWebsiteCookies(false);
-            }, false);
+            });
         }
         if ($('#accept-cookies').length) {
             $('#accept-cookies').on("click", function () {
                 handleWebsiteCookies(true);
-            }, true);
+            });
         }
     }
 
@@ -72,7 +72,7 @@ $(document).ready(function () {
         }
 
         if ($('.show-video').length) {
-            $('.show-video').on("click", acceptCookiesAndShowYouTubeVideo, false);
+            $('.show-video').on("click", acceptCookiesAndShowYouTubeVideo);
         }
     }
 
@@ -217,7 +217,7 @@ function handleWebsiteCookies(accept) {
 
     var notification = $("#cookie-notification");
     if (notification.length) {
-        notification.style.display = "none";
+        notification.hide();
     }
     // TODO: change html.background-color to `#444F60`
 }

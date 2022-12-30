@@ -20,7 +20,7 @@ hero:
 detailCards: # Currently it will have **always** three `titles`.
   title: Great power comes
   subtitle: with great responsibility
-  tiles:
+  cards:
   - title: App builder
     icon: mouse-globe
     text: This is some explanatory text that is on two rows

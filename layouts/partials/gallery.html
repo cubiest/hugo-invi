@@ -5,8 +5,8 @@
     <div class="columns">
       <div class="pswp-gallery" id="invi-gallery">
         {{- range $gallery }}
-        {{ $src_image := resources.Get(print "images/" .f_name) }}
-        {{ $t_image := resources.Get(print "thumbnails/" .thumb_name) }}
+        {{ $src_image := resources.Get (print "images/" .f_name) }}
+        {{ $t_image := resources.Get (print "thumbnails/" .thumb_name) }}
         <a href="{{ $src_image.RelPermalink }}"
           data-pswp-width="{{ $src_image.Width }}"
           data-pswp-height="{{ $src_image.Height }}"
