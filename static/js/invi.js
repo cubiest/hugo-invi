@@ -1,3 +1,4 @@
+import Cookies from '../modules/js.cookie.esm.min.js';
 import PhotoSwipeLightbox from '../modules/photoswipe/photoswipe-lightbox.esm.min.js'; // also imports core
 import PhotoSwipe from '../modules/photoswipe/photoswipe.esm.min.js';
 
@@ -17,7 +18,37 @@ $(document).ready(function () {
     });
     lightbox.init();
 
-    //Mobile menu toggle
+    // Handle video embedding
+    {
+        // Check on page load if user gave consent to youtube cookies.
+        // If true, show video immediately.
+        // If false, show placeholder image and request for consent or direct link.
+        var allow_youtube_cookies = Cookies.get("allow-youtube-cookies");
+
+        var notification = document.getElementsByClassName("video-embed-notification")[0];
+        if (notification !== null && typeof notification !== "undefined") {
+            if (allow_youtube_cookies === null) {
+                notification.style.display = "block";
+            } else {
+                if (allow_youtube_cookies === "true") {
+                    notification.style.display = "none";
+                } else {
+                    notification.style.display = "block";
+                }
+            }
+        }
+
+        if (allow_youtube_cookies === "true") {
+            var embed_video = document.getElementsByClassName("embed-video")[0];
+            if (typeof embed_video === "undefined") {
+                // was undefined, append video
+                var video_id = getVideoID();
+                appendVideo(video_id);
+            }
+        }
+    }
+
+    // Mobile menu toggle
     if ($('.navbar-burger').length) {
         $('.navbar-burger').on("click", function () {
             var menu_id = $(this).attr('data-target');
@@ -27,20 +58,20 @@ $(document).ready(function () {
         });
     }
 
-    //Animate left hamburger icon and open sidebar
+    // Animate left hamburger icon and open sidebar
     $('.menu-icon-trigger').on("click", function (e) {
         e.preventDefault();
         $('.menu-icon-wrapper').toggleClass('open');
         $('.sidebar').toggleClass('is-active');
     });
 
-    //Close sidebar
+    // Close sidebar
     $('.sidebar-close').on("click", function () {
         $('.sidebar').removeClass('is-active');
         $('.menu-icon-wrapper').removeClass('open');
     })
 
-    //Sidebar menu
+    // Sidebar menu
     if ($('.sidebar').length) {
         $(".sidebar-menu > li.have-children > a").on("click", function (i) {
             i.preventDefault();
@@ -57,10 +88,10 @@ $(document).ready(function () {
         });
     }
 
-    //Navbar Clone
+    // Navbar Clone
     if ($('#navbar-clone').length) {
         $(window).on("scroll", function () {    // this will work when your window scrolled.
-            var height = $(window).scrollTop();  //getting the scrolling height of window
+            var height = $(window).scrollTop(); // getting the scrolling height of window
             if (height > 50) {
                 $("#navbar-clone").addClass('is-active');
             } else {
@@ -69,7 +100,7 @@ $(document).ready(function () {
         });
     }
 
-    //reveal elements on scroll so animations trigger the right way
+    // Reveal elements on scroll so animations trigger the right way
     var $window = $(window),
         win_height_padded = $window.height() * 1.1,
         isTouch = Modernizr.touch;
@@ -148,3 +179,50 @@ $(document).ready(function () {
             }
         });
 })
+
+/**
+ * AcceptCookiesAndShowYouTubeVideo user clicked on youtube cookie consent button beneath video placeholder.
+ */
+export function AcceptCookiesAndShowYouTubeVideo() {
+    Cookies.set("allow-youtube-cookies", true, { expires: 730 }); // i.e. in 2 years
+
+    // hide consent notification
+    var notification = document.getElementsByClassName("video-embed-notification")[0];
+    if (notification !== null) {
+        notification.style.display = "none";
+    }
+
+    var video_id = getVideoID();
+    appendVideo(video_id);
+}
+
+/**
+ * getVideoID returns the video id or an empty string.
+ * @return {string} The video id to load
+ */
+function getVideoID() {
+    // get video id
+    var consent_button = document.getElementsByClassName("show-video")[0];
+    if (consent_button === null) {
+        return "";
+    }
+    var video_id = consent_button.getAttribute("data-video-id")
+    if (video_id === null) {
+        return "";
+    }
+
+    return video_id;
+}
+
+/**
+ * appendVideo inserts iframe requires to display the video.
+ * @param {string} video_id The video id to load
+ */
+function appendVideo(video_id) {
+    var wrapper = document.getElementsByClassName("embedded-video-parent")[0];
+    wrapper.style.display = "block";
+    const span = document.createElement("span");
+    span.innerHTML =
+        '<iframe class="embed-video" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/' + video_id + '?rel=0&iv_load_policy=3" frameborder="0"></iframe>';
+    wrapper.appendChild(span);
+}

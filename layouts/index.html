@@ -16,6 +16,10 @@
 {{ partial "gallery.html" . }}
 {{ end }}
 
+{{ if $.Param "video" }}
+{{ partial "video.html" . }}
+{{ end }}
+
 {{ if $.Param.heroItem }}
 {{ partial "hero-item.html" . }}
 {{ end }}
