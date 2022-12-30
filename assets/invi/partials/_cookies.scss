@@ -1,0 +1,20 @@
+#cookie-notification {
+    background-color: whitesmoke;
+    position: sticky;
+    bottom: 0;
+    padding: 8px;
+}
+
+.cookie-btns {
+    white-space: nowrap;
+    display: inline-block;
+    padding: 0 0;
+}
+
+.cookie-btns .button#decline-cookies {
+    background-color: inherit;
+}
+
+.cookie-btns .button#accept-cookies {
+    background-color: azure;
+}

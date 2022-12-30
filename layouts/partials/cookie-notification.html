@@ -1,0 +1,27 @@
+{{- $privacyURL := .Site.Params.privacyURL }}
+{{- $cookiePreferencesURL := .Site.Params.cookiePreferencesURL }}
+<div id="cookie-notification">
+    {{ if eq .Language.Lang "de" }}
+    <div class="container">Wir benutzen Cookies, um Ihr Erlebnis mit dieser Webseite zu
+        verbessern. Sie können <a href="{{ $privacyURL | absLangURL }}">hier</a> weitere Informationen finden.
+        <div class="cookie-btns">
+            <a id="decline-cookies" class="button" href="#">Cookies ablehnen</a>
+            <a id="accept-cookies" class="button" href="#">Cookies akzeptieren</a>
+        </div>
+        {{ with $cookiePreferencesURL }}
+        <div>Siehe <a href="{{ . | absLangURL }}">Cookie Einstellungen</a> für genaue Kontrolle.</div>
+        {{ end }}
+    </div>
+    {{ else }}
+    <div class="container">We use cookies to improve your experience with this website. You can
+        find more info <a href="{{ $privacyURL | absLangURL }}">here</a>.
+        <div class="cookie-btns">
+            <a id="decline-cookies" class="button" href="#">Decline Cookies</a>
+            <a id="accept-cookies" class="button" href="#">Accept Cookies</a>
+        </div>
+        {{ with $cookiePreferencesURL }}
+        <div><a href="{{ . | absLangURL }}">Cookie Settings</a> for granular control.</div>
+        {{ end }}
+    </div>
+    {{ end }}
+</div>

@@ -22,6 +22,8 @@
 
   {{ partial "single/content.html" . }}
 
+  {{ end }}
+
   {{ if .Site.Params.footer }}
   {{ partial "footer.html" . }}
   {{ end }}
@@ -33,9 +35,9 @@
   {{ partial "single/sidebar.html" . }}
   {{ end }}
 
-  {{ end }}
-
   {{ partial "javascript.html" . }}
+
+  {{ partial "cookie-notification.html" . }}
 </body>
 
 </html>
