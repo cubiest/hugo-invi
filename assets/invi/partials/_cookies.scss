@@ -1,5 +1,5 @@
 #cookie-notification {
-    background-color: whitesmoke;
+    background-color: $cp-container-5;
     position: sticky;
     bottom: 0;
     padding: 8px;
@@ -7,7 +7,7 @@
 
 .cookie-btns {
     white-space: nowrap;
-    display: inline-block;
+    display: block;
     padding: 0 0;
 }
 
@@ -16,5 +16,5 @@
 }
 
 .cookie-btns .button#accept-cookies {
-    background-color: azure;
+    background-color: $cp-container-5-default-opt;
 }

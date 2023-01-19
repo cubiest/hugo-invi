@@ -42,13 +42,13 @@ Classes to change the feel of bulma buttons
 .button {
     &.primary-btn {
         outline: none;
-        border-color: $primary;
-        background-color: $primary;
-        color: $white;
+        border-color: $cp-item-5-1-bg;
+        background-color: $cp-item-5-1-bg;
+        color: $cp-item-5-1;
         transition: all 0.5s;
 
         &:hover {
-            color: $white;
+            color: $cp-item-5-1;
         }
 
         &.raised:hover {
@@ -57,26 +57,26 @@ Classes to change the feel of bulma buttons
         }
 
         &.btn-outlined {
-            border-color: $primary;
-            color: $primary;
+            border-color: $cp-item-5-1-bg;
+            color: $cp-item-5-1-bg;
             background-color: transparent;
 
             &:hover {
-                color: $white;
-                background-color: $primary;
+                color: $cp-item-5-1;
+                background-color: $cp-item-5-1-bg;
             }
         }
     }
 
     &.secondary-btn {
         outline: none;
-        border-color: $secondary;
-        background-color: $secondary;
-        color: $white;
+        border-color: $cp-item-5-2-bg;
+        background-color: $cp-item-5-2-bg;
+        color: $cp-item-5-2;
         transition: all 0.5s;
 
         &:hover {
-            color: $white;
+            color: $cp-item-5-2;
         }
 
         &.raised:hover {
@@ -85,26 +85,26 @@ Classes to change the feel of bulma buttons
         }
 
         &.btn-outlined {
-            border-color: $secondary;
-            color: $secondary;
+            border-color: $cp-item-5-2-bg;
+            color: $cp-item-5-2-bg;
             background-color: transparent;
 
             &:hover {
-                color: $white;
-                background-color: $secondary;
+                color: $cp-item-5-2;
+                background-color: $cp-item-5-2-bg;
             }
         }
     }
 
     &.button.accent-btn {
         outline: none;
-        border-color: $accent;
-        background-color: $accent;
-        color: $white;
+        border-color: $cp-item-5-3-bg;
+        background-color: $cp-item-5-3-bg;
+        color: $cp-item-5-3;
         transition: all 0.5s;
 
         &:hover {
-            color: $white;
+            color: $cp-item-5-3;
         }
 
         &.raised:hover {
@@ -113,13 +113,13 @@ Classes to change the feel of bulma buttons
         }
 
         &.btn-outlined {
-            border-color: $accent;
-            color: $accent;
+            border-color: $cp-item-5-3-bg;
+            color: $cp-item-5-3-bg;
             background-color: transparent;
 
             &:hover {
-                color: $white;
-                background-color: $accent;
+                color: $cp-item-5-3;
+                background-color: $cp-item-5-3-bg;
             }
         }
     }

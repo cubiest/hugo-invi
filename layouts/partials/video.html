@@ -5,7 +5,7 @@
 {{- $videoURL     := index $video "videoURL" }}
 {{- $thumbnailURL := index $video "thumbnailURL" }}
 {{ if not (strings.HasPrefix $thumbnailURL "http") }}
-{{ $thumbnailURL = resources.Get(print "thumbnails/" $thumbnailURL) }}
+{{ $thumbnailURL = resources.Get (print "thumbnails/" $thumbnailURL) }}
 {{ end }}
 <section class="section">
     <div class="container">
@@ -27,10 +27,11 @@
                         <a class="button" href="{{ $videoURL }}" target="_blank" rel="noopener, nofollow">{{
                             .Site.Params.video.directLink }}</a>
                     </div>
-                    {{ with .Site.Params.cookiePreferencesURL }}
+                    {{ if .Site.Params.cookiePreferencesURL }}
+                    {{ $cookiePrefURL  := .Site.Params.cookiePreferencesURL }}
+                    {{ $cookiePrefText := .Site.Params.video.cookiePreferences }}
                     <div>
-                        <a href="{{ . | absLangURL }}">{{ .Site.Params.video.cookiePreferences
-                            }}</a>.
+                        <a href="{{ $cookiePrefURL | absLangURL }}">{{ $cookiePrefText }}</a>.
                     </div>
                     {{ end }}
                 </div>

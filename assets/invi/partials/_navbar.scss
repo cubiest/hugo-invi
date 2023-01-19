@@ -46,11 +46,11 @@ Navbar
 
     //Navbar items
     .navbar-item {
-        color: $muted-grey;
+        color: $cp-item-3;
 
         &.is-secondary {
             &:hover {
-                color: $secondary !important;
+                color: $cp-item-3-active !important;
             }
         }
 
@@ -58,14 +58,14 @@ Navbar
             padding: 10px 0;
 
             .navbar-link {
-                color: $muted-grey;
+                color: $cp-item-3;
 
                 &:after {
                     top: 55%;
                     height: 0.5em;
                     width: 0.5em;
                     border-width: 2px;
-                    border-color: $muted-grey;
+                    border-color: $cp-item-3;
                 }
             }
 
@@ -73,7 +73,7 @@ Navbar
                 top: 3.4rem;
                 min-width: 220px;
                 margin-top: 4px;
-                border-top-color: $secondary;
+                border-top-color: $cp-item-3-active;
 
                 .navbar-item {
                     padding: 10px 20px;
@@ -82,10 +82,10 @@ Navbar
 
             &:hover {
                 .navbar-link {
-                    color: $secondary;
+                    color: $cp-item-3-active;
 
                     &:after {
-                        border-color: $secondary;
+                        border-color: $cp-item-3-active;
                     }
                 }
             }
@@ -105,14 +105,14 @@ Navbar
         left: 0;
         width: 100%;
         min-height: 4rem !important;
-        background: $white;
+        background-color: $cp-container-1;
         box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.12);
 
         a {
-            color: $blue-grey;
+            color: $cp-item-3;
 
             &:hover {
-                color: $primary;
+                color: $cp-item-3-active;
             }
         }
     }
@@ -124,7 +124,7 @@ Navbar
     top: 0;
     left: 0;
     width: 100%;
-    background: $white;
+    background-color: $cp-container-1;
     transform: translateY(-100%);
     z-index: 100;
     box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.12);

@@ -1,14 +1,14 @@
 {{ define "main" }}
 
-{{ if $.Param.hero }}
+{{ if $.Param "hero" }}
 {{ partial "hero.html" . }}
 {{ end }}
 
-{{ if $.Param.detailCards }}
+{{ if $.Param "detailCards" }}
 {{ partial "detail-cards.html" . }}
 {{ end }}
 
-{{ if $.Param.featureHighlights }}
+{{ if $.Param "featureHighlights" }}
 {{ partial "feature-highlights.html" . }}
 {{ end }}
 
@@ -20,15 +20,15 @@
 {{ partial "video.html" . }}
 {{ end }}
 
-{{ if $.Param.heroItem }}
+{{ if $.Param "heroItem" }}
 {{ partial "hero-item.html" . }}
 {{ end }}
 
-{{ if $.Param.quoteCards }}
+{{ if $.Param "quoteCards" }}
 {{ partial "quote-cards.html" . }}
 {{ end }}
 
-{{ if $.Param.contactUs }}
+{{ if $.Param "contactUs" }}
 {{ partial "contact-us.html" . }}
 {{ end }}
 

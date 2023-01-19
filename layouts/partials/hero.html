@@ -1,4 +1,4 @@
-{{- $hero        := $.Param.hero }}
+{{- $hero        := $.Param "hero" }}
 {{- $title       := index $hero "title" }}
 {{- $subtitle    := index $hero "subtitle" }}
 {{- $buttonText  := index $hero "buttonText" }}
