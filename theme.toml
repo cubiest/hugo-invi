@@ -12,7 +12,7 @@ tags = ["responsive", "minimal", "light", "company", "clean", "multilingual", "g
 features = []
 
 # minimum hugo version
-min_version = "0.107"
+min_version = "0.109"
 
 [author]
   name = "Cubiest"
