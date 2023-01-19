@@ -3,7 +3,7 @@ Main SCSS file / Fresh
 ========================================================================== */
 
 //Imports
-@import 'partials/colors';
+@import 'partials/colorpalette';
 @import 'partials/animations';
 @import 'partials/buttons';
 @import 'partials/cards';
@@ -21,5 +21,5 @@ Main SCSS file / Fresh
 @import 'partials/video';
 
 html {
-    background-color: #444F60;
+    background-color: $cp-site-bg;
 }

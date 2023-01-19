@@ -7,7 +7,7 @@ Cards and Card content styles
 // Feature Card
 .feature-card {
     width: 300px;
-    background-color: #fff;
+    background-color: $cp-container-1;
     border-radius: 3px;
     margin: 0 auto;
 
@@ -15,7 +15,7 @@ Cards and Card content styles
         padding-top: 25px;
         font-size: 1.2rem;
         font-weight: 600;
-        color: $blue-grey;
+        color: $cp-item-4-1;
     }
 
     .card-icon img {
@@ -27,7 +27,7 @@ Cards and Card content styles
         padding: 0 40px;
 
         p {
-            color: $muted-grey;
+            color: $cp-item-4-2;
         }
 
         &.height-aligned {
@@ -40,7 +40,7 @@ Cards and Card content styles
     }
 
     &.is-bordered {
-        border: 1px solid $fade-grey;
+        border: 1px solid $cp-container-1-border;
     }
 
     &.height-aligned {
@@ -53,7 +53,7 @@ Cards and Card content styles
 // Flex Card
 .flex-card {
     position: relative;
-    background-color: #fff;
+    background-color: $cp-container-1;
     border: 0;
     border-radius: 0.1875rem;
     display: inline-block;
@@ -81,25 +81,25 @@ Cards and Card content styles
     .navigation-tabs {
         &.outlined-pills .tabs.tabs-header {
             &.primary {
-                background-color: $primary;
+                background-color: $cp-base-primary;
             }
 
             &.secondary {
-                background-color: $secondary;
+                background-color: $cp-base-secondary;
             }
 
             &.accent {
-                background-color: $accent;
+                background-color: $cp-base-tertiary;
             }
 
             ul li a {
-                color: $grey-white;
+                color: $cp-base-text-2;
             }
 
             ul li.is-active a {
-                color: $white;
-                border: 1px solid $white;
-                border-bottom-color: $white !important;
+                color: $cp-base-text-2-active;
+                border: 1px solid $cp-container-1;
+                border-bottom-color: $cp-container-1 !important;
             }
         }
     }

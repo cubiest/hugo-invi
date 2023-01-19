@@ -3,17 +3,18 @@ Section Styles
 ========================================================================== */
 
 section {
-    background-color: $white;
+    background-color: $cp-container-2;
 
     &:nth-child(odd) {
-        background-color: $section-grey;
+        background-color: $cp-container-2-alt;
     }
 }
 
 //Sections
 .section {
     &.section-secondary {
-        background-color: $secondary;
+        background-color: $cp-item-4-3-secondary;
+        color: $cp-item-4-3 !important;
     }
 
     &.section-half {
@@ -22,7 +23,7 @@ section {
 
     .subtitle {
         &.is-muted {
-            color: $muted-grey;
+            color: $cp-item-4-2;
         }
     }
 }
@@ -34,7 +35,7 @@ section {
 
     .subtitle {
         &.is-muted {
-            color: $muted-grey;
+            color: $cp-item-4-2;
         }
     }
 }
@@ -43,7 +44,7 @@ section {
 .divider {
     height: 3px;
     border-radius: 50px;
-    background: $secondary;
+    background-color: $cp-item-4-3-secondary;
     width: 60px;
 
     &.is-centered {
@@ -72,13 +73,13 @@ img.pushed-image {
         }
 
         .icon-box-title {
-            color: $blue-grey;
+            color: $cp-item-4-1;
             font-size: 1.2rem;
             font-weight: 600;
         }
 
         .icon-box-text {
-            color: $title-grey;
+            color: $cp-item-4-2;
             font-size: 1rem;
             font-weight: 400;
         }

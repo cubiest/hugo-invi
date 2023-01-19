@@ -1,0 +1,87 @@
+/* ==========================================================================
+Color palette
+========================================================================== */
+
+// base colors
+$cp-base-primary: #4fc1ea;
+$cp-base-secondary: #f39200;
+$cp-base-tertiary: #00efb7;
+$cp-base-text-1: #fff;
+$cp-base-text-1-active: #eff4f7;
+$cp-base-text-1-primary: $cp-base-primary;
+$cp-base-text-1-secondary: #f39200;
+$cp-base-text-2: #f2f2f2;
+$cp-base-text-2-active: #fff;
+$cp-base-text-3: #878787;
+$cp-base-text-3-active: #eff4f7;
+$cp-base-text-error: #fc354c;
+
+// special cases
+$cp-placeholder: #bebebe;
+$cp-site-bg: #444f60;
+
+// ---Explanation---
+// `container` for spaces containing items; backgrounds for page and/or sections.
+// + alternatives:
+// -1/-2/-3
+// + optional: extra-state: active, border
+// e.g.: container-1, container-1-active.
+
+// default container
+$cp-container-1: #fcfcfc;
+$cp-container-1-active: #eff4f7;
+$cp-container-1-border: #ededed;
+
+// sections
+$cp-container-2: #fff;
+$cp-container-2-alt: #fbfbfb;
+
+// sidebar
+$cp-container-3: #344258;
+$cp-container-3-border: #2d3a4e;
+
+// notification prio 1
+$cp-container-4: beige;
+
+// notification prio lowest
+$cp-container-5: whitesmoke;
+$cp-container-5-default-opt: azure;
+
+// ---Explanation---
+// `item` for details; usually buttons and text.
+// Same naming structure as `container`, but additionally:
+// + optional: elements compositioned together for the same alternative:
+// -1/-2/-3
+// e.g.: item-1-1 (title), item-1-2 (paragraph).
+
+// backtotop
+$cp-item-1-1: #344258;
+$cp-item-1-1-active: $cp-base-secondary;
+$cp-item-1-2: $cp-base-text-1;
+
+// testimonials; uses $cp-container-1
+$cp-item-2-1: #333;
+$cp-item-2-2: $cp-base-text-1;
+$cp-item-2-3: #444f60;
+
+// dropdown, navbar; use $cp-container-1
+$cp-item-3: #878787;
+$cp-item-3-active: $cp-base-secondary;
+$cp-item-3-border: whitesmoke;
+
+// feature cards (uses $cp-container-1), footer (uses $cp-site-bg), hero, sections
+$cp-item-4-1: #444f60;
+$cp-item-4-2: #999;
+$cp-item-4-3: #fff;
+$cp-item-4-3-secondary: #f39200;
+$cp-item-4-4: #98a9c3;
+
+// buttons
+$cp-item-5-1: $cp-base-text-1;
+$cp-item-5-1-bg: $cp-base-primary;
+$cp-item-5-2: $cp-base-text-1;
+$cp-item-5-2-bg: $cp-base-secondary;
+$cp-item-5-3: $cp-base-text-1;
+$cp-item-5-3-bg: $cp-base-tertiary;
+
+// TODO. replace lighten() / darken() calls

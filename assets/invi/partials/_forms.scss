@@ -3,7 +3,7 @@ Inputs styles
 ========================================================================== */
 
 input.input {
-    color: $basaltic-grey;
+    color: $cp-base-text-3;
     box-shadow: none !important;
     transition: all 0.8s;
     padding-bottom: 3px;
@@ -23,7 +23,7 @@ input.input {
 
     &:focus,
     &:active {
-        border-color: $light-grey;
+        border-color: $cp-base-text-3-active;
     }
 
     &.rounded {
@@ -31,34 +31,34 @@ input.input {
     }
 
     &.is-primary-focus:focus {
-        border-color: $primary;
+        border-color: $cp-base-primary;
 
         ~span.icon i {
-            color: $primary;
+            color: $cp-base-primary;
         }
     }
 
     &.is-secondary-focus:focus {
-        border-color: $secondary;
+        border-color: $cp-item-5-2-bg;
 
         ~span.icon i {
-            color: $secondary;
+            color: $cp-item-5-2-bg;
         }
     }
 
     &.is-accent-focus:focus {
-        border-color: $accent;
+        border-color: $cp-item-5-3-bg;
 
         ~span.icon i {
-            color: $accent;
+            color: $cp-item-5-3-bg;
         }
     }
 
-    &.is-bloody-focus:focus {
-        border-color: $bloody;
+    &.is-error-focus:focus {
+        border-color: $cp-base-text-error;
 
         ~span.icon i {
-            color: $bloody;
+            color: $cp-base-text-error;
         }
     }
 }
