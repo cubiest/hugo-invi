@@ -98,7 +98,7 @@ Sidebar Styles
         display: flex;
         justify-content: space-between;
         align-items: center;
-        border-bottom: 1px solid lighten($cp-container-3, 5%);
+        border-bottom: 1px solid $cp-container-3; // FIXME: lighten($cp-container-3, 5%); -> variable is hex string, not color
         padding: 0 20px;
 
         img {
@@ -160,9 +160,9 @@ Sidebar Styles
 
                     li {
                         a {
-                            background-color: darken($cp-container-3, 5%);
+                            background-color: $cp-container-3; // FIXME: darken($cp-container-3, 5%); -> variable is hex string, not color
                             padding-left: 62px;
-                            border-bottom: 1px solid lighten($cp-container-3-border, 2%);
+                            border-bottom: 1px solid $cp-container-3-border;// FIXME: lighten($cp-container-3-border, 2%); -> variable is hex string, not color
                             font-size: .8rem;
 
                             &:hover {

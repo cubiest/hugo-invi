@@ -31,10 +31,10 @@ input.input {
     }
 
     &.is-primary-focus:focus {
-        border-color: $cp-base-primary;
+        border-color: $cp-base-text-1-primary;
 
         ~span.icon i {
-            color: $cp-base-primary;
+            color: $cp-base-text-1-primary;
         }
     }
 

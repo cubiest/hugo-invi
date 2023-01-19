@@ -1,9 +1,10 @@
 /* ==========================================================================
-Main SCSS file / Fresh
+Main SCSS file / Invi
 ========================================================================== */
 
+@import "hugo:vars";
+
 //Imports
-@import 'partials/colorpalette';
 @import 'partials/animations';
 @import 'partials/buttons';
 @import 'partials/cards';

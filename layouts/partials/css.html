@@ -1,7 +1,7 @@
 {{- $inServerMode := .Site.IsServer }}
 {{- $sass         := "style.sass" }}
 {{- $cssTarget    := "css/style.css" }}
-{{- $cssOpts      := cond ($inServerMode) (dict "targetPath" $cssTarget "enableSourceMap" true) (dict "targetPath" $cssTarget "outputStyle" "compressed") }}
+{{- $cssOpts      := cond ($inServerMode) (dict "targetPath" $cssTarget "enableSourceMap" true "transpiler" "libsass" "vars" site.Params.style) (dict "targetPath" $cssTarget "outputStyle" "compressed" "transpiler" "libsass" "vars" site.Params.style) }}
 <link rel="icon" type="image/png" href="{{ "images/favicon.png" | relURL }}" />
 <!-- bulma, fresh start -->
 {{- if $inServerMode }}

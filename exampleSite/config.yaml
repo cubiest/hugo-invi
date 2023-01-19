@@ -339,6 +339,90 @@ params:
     # Default width/height. Uncomment if you need to change
     # width: 112
     # height: 28
+  style:
+    # base colors
+    # cp_base_primary: '#4fc1ea'
+    # cp_base_secondary: '#f39200'
+    # cp_base_tertiary: '#00efb7'
+    cp_base_text_1: '#fff'
+    cp_base_text_1_active: '#eff4f7'
+    cp_base_text_1_primary: '#4fc1ea'
+    cp_base_text_1_secondary: '#f39200'
+    cp_base_text_2: '#f2f2f2'
+    cp_base_text_2_active: '#fff'
+    cp_base_text_3: '#878787'
+    cp_base_text_3_active: '#eff4f7'
+    cp_base_text_error: '#fc354c'
+
+    # special cases
+    cp_placeholder: '#bebebe'
+    cp_site_bg: '#444f60'
+
+    # ---Explanation---
+    # `container` for spaces containing items; backgrounds for page and/or sections.
+    # + alternatives:
+    # _1/_2/_3
+    # + optional: extra-state: active, border
+    # e.g.: container_1, container_1_active.
+
+    # default container
+    cp_container_1: '#fcfcfc'
+    cp_container_1_active: '#eff4f7'
+    cp_container_1_border: '#ededed'
+
+    # sections
+    cp_container_2: '#fff'
+    cp_container_2_alt: '#fbfbfb'
+
+    # sidebar
+    cp_container_3: '#344258'
+    cp_container_3_border: '#2d3a4e'
+
+    # notification prio 1
+    cp_container_4: 'beige'
+
+    # notification prio lowest
+    cp_container_5: 'whitesmoke'
+    cp_container_5_default_opt: 'azure'
+
+    # ---Explanation---
+    # `item` for details; usually buttons and text.
+    # Same naming structure as `container`, but additionally:
+    # + optional: elements compositioned together for the same alternative:
+    # _1/_2/_3
+    # e.g.: item_1_1 (title), item_1_2 (paragraph).
+
+    # backtotop
+    cp_item_1_1: '#344258'
+    cp_item_1_1_active: '#f39200'
+    cp_item_1_2: '#fff'
+
+    # testimonials; uses $cp_container_1
+    cp_item_2_1: '#333'
+    cp_item_2_2: '#fff'
+    cp_item_2_3: '#444f60'
+
+    # dropdown, navbar; use $cp_container_1
+    cp_item_3: '#878787'
+    cp_item_3_active: '#f39200'
+    cp_item_3_border: 'whitesmoke'
+
+    # feature cards (uses $cp_container_1), footer (uses $cp_site_bg), hero, sections
+    cp_item_4_1: '#444f60'
+    cp_item_4_2: '#999'
+    cp_item_4_3: '#fff'
+    cp_item_4_3_secondary: '#f39200'
+    cp_item_4_4: '#98a9c3'
+
+    # buttons
+    cp_item_5_1: '#fff'
+    cp_item_5_1_bg: '#4fc1ea'
+    cp_item_5_2: '#fff'
+    cp_item_5_2_bg: '#f39200'
+    cp_item_5_3: '#fff'
+    cp_item_5_3_bg: '#00efb7'
+
+    # TODO. replace lighten() / darken() calls
 # ------------------------------------------
 # Privacy
 # ------------------------------------------
