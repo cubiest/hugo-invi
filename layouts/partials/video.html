@@ -1,0 +1,43 @@
+{{- $video        := $.Param "video" }}
+{{- $title        := index $video "title" }}
+{{- $subtitle     := index $video "subtitle" }}
+{{- $videoID      := index $video "videoID" }}
+{{- $videoURL     := index $video "videoURL" }}
+{{- $thumbnailURL := index $video "thumbnailURL" }}
+{{ if not (strings.HasPrefix $thumbnailURL "http") }}
+{{ $thumbnailURL = resources.Get (print "thumbnails/" $thumbnailURL) }}
+{{ end }}
+<section class="section">
+    <div class="container">
+        <div class="title-wrapper has-text-centered">
+            <h2 class="title is-2">{{ $title }}</h2>
+            <h3 class="subtitle is-5 is-muted">{{ $subtitle }}</h3>
+            <div class="divider is-centered"></div>
+        </div>
+        <div class="has-text-centered video-embed-notification">
+            <div class="has-text-left">
+                <img alt="Video Thumbnail" src="{{ $thumbnailURL }}" />
+                <div class="notification-text">
+                    <div>
+                        {{ .Site.Params.video.infoRequired }}
+                    </div>
+                    <div class="button-row">
+                        <a class="button show-video" data-video-id="{{ $videoID }}">{{ .Site.Params.video.showAccept
+                            }}</a>
+                        <a class="button" href="{{ $videoURL }}" target="_blank" rel="noopener, nofollow">{{
+                            .Site.Params.video.directLink }}</a>
+                    </div>
+                    {{ if .Site.Params.cookiePreferencesURL }}
+                    {{ $cookiePrefURL  := .Site.Params.cookiePreferencesURL }}
+                    {{ $cookiePrefText := .Site.Params.video.cookiePreferences }}
+                    <div>
+                        <a href="{{ $cookiePrefURL | absLangURL }}">{{ $cookiePrefText }}</a>.
+                    </div>
+                    {{ end }}
+                </div>
+            </div>
+        </div>
+        <div class="has-text-centered embedded-video-parent" style="display: none;">
+        </div>
+    </div>
+</section>

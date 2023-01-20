@@ -1,15 +1,16 @@
-{{- $section2 := .Site.Params.section2 }}
-{{- $title    := index $section2 "title" }}
-{{- $subtitle := index $section2 "subtitle" }}
-{{- $features := index $section2 "features" }}
+{{- $highlights := $.Param "featureHighlights" }}
+{{- $subtitle   := index $highlights "subtitle" }}
+{{- $title      := index $highlights "title" }}
+{{- $features   := index $highlights "features" }}
 <section class="section is-medium">
   <div class="container">
     <div class="columns">
       <div class="column is-centered-tablet-portrait">
-        <h1 class="title section-title">{{ $title }}</h1>
+        <h2 class="title section-title">{{ $title }}</h2>
         <h3 class="subtitle is-5 is-muted">{{ $subtitle }}</h3>
         <div class="divider"></div>
       </div>
+
       <div class="column is-7 mt-60">
         {{- range $features }}
         <article class="media icon-box">

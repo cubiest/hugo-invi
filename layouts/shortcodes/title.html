@@ -1,3 +1,1 @@
-{{- $level := .Get 0 }}
-{{- $text := .Get 1 }}
-<h{{ $level }} class="title is-{{ $level }}">{{ $text }}</h{{ $level }}>
+<h{{ .Get "lvl" }} {{ with .Get "id" }}id="{{ . }}"{{ end }} class="title is-{{ .Get "lvl" }}">{{ .Get "text" }}</h{{ .Get "lvl" }}>

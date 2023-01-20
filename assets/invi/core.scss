@@ -1,23 +1,26 @@
 /* ==========================================================================
-Main SCSS file / Fresh
+Main SCSS file / Invi
 ========================================================================== */
 
+@import "hugo:vars";
+
 //Imports
-@import 'partials/colors';
-@import 'partials/navbar';
-@import 'partials/dropdowns';
-@import 'partials/sections';
-@import 'partials/hero';
-@import 'partials/footer';
+@import 'partials/animations';
 @import 'partials/buttons';
 @import 'partials/cards';
+@import 'partials/cookies';
+@import 'partials/dropdowns';
+@import 'partials/footer';
 @import 'partials/forms';
-@import 'partials/animations';
+@import 'partials/hero';
+@import 'partials/navbar';
+@import 'partials/responsive';
+@import 'partials/sections';
 @import 'partials/sidebar';
 @import 'partials/testimonials';
-@import 'partials/responsive';
 @import 'partials/utils';
+@import 'partials/video';
 
 html {
-    background-color: #444F60;
+    background-color: $cp-site-bg;
 }

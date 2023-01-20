@@ -24,15 +24,305 @@ markup:
   goldmark:
     renderer:
       unsafe: true # Allows you to write raw html in your md files
-
+# ------------------------------------------
+# Site Params by Language
+# ------------------------------------------
+# Main Configuration
+defaultContentLanguage: en
+defaultContentLanguageInSubdir: true
+languages:
+  en:
+    weight: 1 # highest priority
+    languageName: English
+    languageCode: en-us
+    # ------------------------------------------
+    # Contact Us
+    # ------------------------------------------
+    emailEnterName: "Enter your name"
+    emailEnterEMailAddress: "Enter your email address"
+    # ------------------------------------------
+    # Video - accept 3rd party cookies
+    # ------------------------------------------
+    video:
+      infoRequired: "Playing YouTube videos requires you to accept their cookies."
+      showAccept: "Accept cookies & Show video"
+      directLink: "Open in new Tab"
+      cookiePreferences: "Show cookie preferences"
+    # ------------------------------------------
+    # SEO (serach engine optimization)
+    # ------------------------------------------
+    # Used as meta data; describe your site to make Search Engine Bots happy
+    description:
+    schema:
+      organization:
+        icon_width: 420
+        icon_height: 420
+        sameAs:
+          - "https://twitter.com/test"
+        keywords:
+          - "XXX Software"
+          - "Software Name"
+          - "Main Feature X"
+    # ------------------------------------------
+    # Navigation Bar
+    # ------------------------------------------
+    # Customizable navbar. For a dropdown, add a "sublinks" list.
+    navbar:
+    - name: Features
+      url: /
+    - name: Pricing
+      url: /
+    - name: Dropdown
+      sublinks:
+      - name: Dropdown item
+        url: /
+      - name: Dropdown item
+        url: /
+      - name: Dropdown item
+        url: /
+    - name: Log in
+      url: /
+    - name: Sign up
+      url: /
+      button: true
+    # ------------------------------------------
+    # Sidebar
+    # ------------------------------------------
+    sidebar:
+      # Logo (from /images/logos/___.svg)
+      logo: fresh-square
+      sections:
+      - title: User
+        icon: user
+        links:
+        - text: Profile
+          url: /
+        - text: Account
+          url: /
+        - text: Settings
+          url: /
+      - title: Messages
+        icon: envelope
+        links:
+        - text: Inbox
+          url: /
+        - text: Compose
+          url: /
+      - title: Images
+        icon: image
+        links:
+        - text: Library
+          url: /
+        - text: Upload
+          url: /
+      - title: Settings
+        icon: cog
+        links:
+        - text: User settings
+          url: /
+        - text: App settings
+          url: /
+    # ------------------------------------------
+    # Footer
+    # ------------------------------------------
+    footer:
+      # Logo (from /images/logos/___)
+      logo: fresh-white-alt.svg
+      # Social Media Title
+      socialmediatitle: Follow Us
+      # Social media links (GitHub, Twitter, etc.). All are optional.
+      # Icons are from Font Awesome
+      socialmedia:
+      - url: https://github.com/lucperkins/github-fresh
+        icon: github
+      - url: https://dribbble.com/#
+        icon: dribbble
+      - url: https://facebook.com/#
+        icon: facebook
+      - url: https://twitter.com/lucperkins
+        icon: twitter
+      - url: https://bitbucket.org/#
+        icon: bitbucket
+      bulmalogo: true
+      # quicklinks expects internal urls, i.e. it uses `absLangURL`
+      quicklinks:
+        column1:
+          title: "Product"
+          links:
+          - text: Discover features
+            url: /
+          - text: Why choose our product?
+            url: /
+          - text: Compare features
+            url: /
+          - text: Our roadmap
+            url: /
+          - text: Terms of Service
+            url: /agb
+        column2:
+          title: "Docs"
+          links:
+          - text: Get started
+            url: /
+          - text: User guides
+            url: /
+          - text: Admin guide
+            url: /
+          - text: Developers
+            url: /
+        column3:
+          title: "Blog"
+          links:
+          - text: Latest news
+            url: /blog/first
+  de:
+    weight: 2
+    languageName: Deutsch
+    languageCode: de-de
+    # ------------------------------------------
+    # Contact Us
+    # ------------------------------------------
+    emailEnterName: "Trage deinen Namen ein"
+    emailEnterEMailAddress: "Trage deine E-Mail-Adresse ein"
+    # ------------------------------------------
+    # Video - accept 3rd party cookies
+    # ------------------------------------------
+    video:
+      infoRequired: "Das Abspielen von YouTube Videos erfordert, dass Sie deren Cookies akzeptieren."
+      showAccept: "Cookies akzeptieren & Video anzeigen"
+      directLink: "Im neuen Tab öffnen"
+      cookiePreferences: "Öffne die Cookie Einstellungen"
+    # ------------------------------------------
+    # SEO (serach engine optimization)
+    # ------------------------------------------
+    # Used as meta data; describe your site to make Search Engine Bots happy
+    description:
+    schema:
+      organization:
+        icon_width: 420
+        icon_height: 420
+        sameAs:
+          - "https://twitter.com/test"
+        keywords:
+          - "XXX Software"
+          - "Software Name"
+          - "Hauptfunktion X"
+    # ------------------------------------------
+    # Navigation Bar
+    # ------------------------------------------
+    # Customizable navbar. For a dropdown, add a "sublinks" list.
+    navbar:
+    - name: Funktionen
+      url: /
+    - name: Preise
+      url: /
+    - name: Dropdown
+      sublinks:
+      - name: Artikel 1
+        url: /
+      - name: Artikel 2
+        url: /
+      - name: Artikel 3
+        url: /
+    - name: Log-in
+      url: /
+    - name: Anmelden
+      url: /
+      button: true
+    # ------------------------------------------
+    # Sidebar
+    # ------------------------------------------
+    sidebar:
+      # Logo (from /images/logos/___.svg)
+      logo: fresh-square
+      sections:
+      - title: Benutzer
+        icon: user
+        links:
+        - text: Profil
+          url: /
+        - text: Konto
+          url: /
+        - text: Einstellungen
+          url: /
+      - title: Nachrichten
+        icon: envelope
+        links:
+        - text: Eingang
+          url: /
+        - text: Verfassen
+          url: /
+      - title: Bilder
+        icon: image
+        links:
+        - text: Bibliothek
+          url: /
+        - text: Onlinespeicher
+          url: /
+      - title: Einstellungen
+        icon: cog
+        links:
+        - text: Benutzer
+          url: /
+        - text: Software
+          url: /
+    # ------------------------------------------
+    # Footer
+    # ------------------------------------------
+    footer:
+      # Logo (from /images/logos/___)
+      logo: fresh-white-alt.svg
+      # Social Media Title
+      socialmediatitle: Folge Uns
+      # Social media links (GitHub, Twitter, etc.). All are optional.
+      # Icons are from Font Awesome
+      socialmedia:
+      - url: https://github.com/lucperkins/github-fresh
+        icon: GitHub
+      - url: https://facebook.com/#
+        icon: Facebook
+      - url: https://dribbble.com/#
+        icon: Dribbble
+      - url: https://twitter.com/lucperkins
+        icon: Twitter
+      - url: https://bitbucket.org/#
+        icon: Bitbucket
+      bulmalogo: true
+      # quicklinks expects internal urls, i.e. it uses `absLangURL`
+      quicklinks:
+        column1:
+          title: "Produkt"
+          links:
+          - text: Funktionen entdecken
+            url: /
+          - text: Warum unser Produkt?
+            url: /
+          - text: Funktionen im Vergleich
+            url: /
+          - text: Roadmap
+            url: /
+          - text: AGB
+            url: /agb
+        column2:
+          title: "Dokumentation"
+          links:
+          - text: Einstieg
+            url: /
+          - text: für Benutzer
+            url: /
+          - text: für Admins
+            url: /
+          - text: für Entwickler
+            url: /
+        column3:
+          title: "Blog"
+          links:
+          - text: Neuigkeiten
+            url: /blog/first
+# ------------------------------------------
+# Generic Site Params
+# ------------------------------------------
 params:
-  # ------------------------------------------
-  # SEO (serach engine optimization)
-  # ------------------------------------------
-  # Open graph allows easy social sharing. If you don't want it you can set it to false or just delete the variable
-  openGraph: true
-  # Used as meta data; describe your site to make Google Bots happy
-  description:
   # ------------------------------------------
   # Website Behaviour
   # ------------------------------------------
@@ -43,202 +333,106 @@ params:
   # ------------------------------------------
   copyright: "Copyright © xxxx <Name>"
   # ------------------------------------------
+  # SEO (serach engine optimization)
+  # ------------------------------------------
+  site_name: "My Site" # or company name
+  # Open graph allows easy social sharing. If you don't want it you can set it to false or just delete the variable
+  openGraph: true
+  twitter_site_handle: "@test"
+  # ------------------------------------------
   # Navigation Bar
   # ------------------------------------------
   navbarlogo:
   # Logo (from static/images/logos/___)
     image: logos/fresh.svg
-    link: /
+    url: /
     # Default width/height. Uncomment if you need to change
     # width: 112
     # height: 28
-  # Customizable navbar. For a dropdown, add a "sublinks" list.
-  navbar:
-  - title: Features
-    url: /
-  - title: Pricing
-    url: /
-  - title: Dropdown
-    sublinks:
-    - title: Dropdown item
-      url: /
-    - title: Dropdown item
-      url: /
-    - title: Dropdown item
-      url: /
-  - title: Log in
-    url: /
-  - title: Sign up
-    url: /
-    button: true
-  # ------------------------------------------
-  # Sidebar
-  # ------------------------------------------
-  sidebar:
-    # Logo (from /images/logos/___.svg)
-    logo: fresh-square
-    sections:
-    - title: User
-      icon: user
-      links:
-      - text: Profile
-        url: /
-      - text: Account
-        url: /
-      - text: Settings
-        url: /
-    - title: Messages
-      icon: envelope
-      links:
-      - text: Inbox
-        url: /
-      - text: Compose
-        url: /
-    - title: Images
-      icon: image
-      links:
-      - text: Library
-        url: /
-      - text: Upload
-        url: /
-    - title: Settings
-      icon: cog
-      links:
-      - text: User settings
-        url: /
-      - text: App settings
-        url: /
-  section1: #Describes the second "page" which you will see when you scroll down. Currently it will have **always** three `titles`.
-    title: Great power comes
-    subtitle: with great responsibility
-    tiles:
-    - title: App builder
-      icon: mouse-globe
-      text: This is some explanatory text that is on two rows
-      url: /
-      buttonText: Free trial
-    - title: Cloud integration
-      icon: laptop-cloud
-      text: This is some explanatory text that is on two rows
-      url: /
-      buttonText: Get started
-    - title: Add-ons & plugins
-      icon: plug-cloud
-      text: This is some explanatory text that is on two rows
-      url: /
-      buttonText: Get started
-  section2: # Shows information why someone should use this product.
-    title: You're here because you want the best
-    subtitle: And we know it
-    features:
-    - title: Powerful and unified interface
-      text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.
-      # Icon (from /images/illustrations/icons/___.svg)
-      icon: laptop-globe
-    - title: Cross-device synchronisation
-      text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.
-      icon: doc-sync
-    - title: Nomad system
-      text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.
-      icon: mobile-feed
-  section3: # Display a bright image of your product
-    title: One platform
-    subtitle: To rule them all
-    image: illustrations/mockups/app-mockup.png
-    buttonText: Get started
-    buttonLink: "#"
-  section4: # What clients says about us.
-    title: Our Clients love us!
-    subtitle: Lorem ipsum sit dolor amet is a dummy text used by typography industry
-    clients:
-    - name: Irma Walters
-      quote: Lorem ipsum dolor sit amet, elit deleniti dissentias quo eu, hinc minim appetere te usu, ea case duis scribentur has. Duo te consequat elaboraret, has quando suavitate at.
-      job: Accountant
-      img: 1
-    - name: John Bradley
-      quote: Lorem ipsum dolor sit amet, elit deleniti dissentias quo eu, hinc minim appetere te usu, ea case duis scribentur has. Duo te consequat elaboraret, has quando suavitate at.
-      job: Financial Analyst
-      img: 2
-    - name: Gary Blackman
-      quote: Lorem ipsum dolor sit amet, elit deleniti dissentias quo eu, hinc minim appetere te usu, ea case duis scribentur has. Duo te consequat elaboraret, has quando suavitate at.
-      job: HR Manager
-      img: 3
-  section5: true # Write us
-  # ------------------------------------------
-  # Footer
-  # ------------------------------------------
-  footer:
-    # Logo (from /images/logos/___)
-    logo: fresh-white-alt.svg
-    # Social Media Title
-    socialmediatitle: Follow Us
-    # Social media links (GitHub, Twitter, etc.). All are optional.
-    socialmedia:
-    - link: https://github.com/lucperkins/github-fresh
-      # Icons are from Font Awesome
-      icon: github
-    - link: https://dribbble.com/#
-      icon: dribbble
-    - link: https://facebook.com/#
-      icon: facebook
-    - link: https://twitter.com/lucperkins
-      icon: twitter
-    - link: https://bitbucket.org/#
-      icon: bitbucket
-    bulmalogo: true
-    quicklinks:
-      column1:
-        title: "Product"
-        links:
-        - text: Discover features
-          link: /
-        - text: Why choose our product?
-          link: /
-        - text: Compare features
-          link: /
-        - text: Our roadmap
-          link: /
-        - text: AGB
-          link: /agb
-      column2:
-        title: "Docs"
-        links:
-        - text: Get started
-          link: /
-        - text: User guides
-          link: /
-        - text: Admin guide
-          link: /
-        - text: Developers
-          link: /
-      column3:
-        title: "Blog"
-        links:
-        - text: Latest news
-          link: /blog/first
-        - text: Tech articles
-          link: /blog/second
-  # ------------------------------------------
-  # Landingpage
-  # ------------------------------------------
-  hero:
-    # Main hero title
-    title: Manage. Deploy.
-    # Hero subtitle (optional)
-    subtitle: Lorem ipsum sit dolor amet is dummy text used by the typography industry
-    # Button text
-    buttontext: Get started
-    # Where the main hero button links to
-    buttonlink: "#"
-    # Hero image (from static/images/___)
-    image: illustrations/worker.svg
-    # Footer logos (from static/images/logos/clients/___.svg)
-    clientlogos:
-    - systek
-    - tribe
-    - kromo
-    - infinite
-    - gutwork
+  style:
+    # base colors
+    # cp_base_primary: '#4fc1ea'
+    # cp_base_secondary: '#f39200'
+    # cp_base_tertiary: '#00efb7'
+    cp_base_text_1: '#fff'
+    cp_base_text_1_active: '#eff4f7'
+    cp_base_text_1_primary: '#4fc1ea'
+    cp_base_text_1_secondary: '#f39200'
+    cp_base_text_2: '#f2f2f2'
+    cp_base_text_2_active: '#fff'
+    cp_base_text_3: '#878787'
+    cp_base_text_3_active: '#eff4f7'
+    cp_base_text_error: '#fc354c'
+
+    # special cases
+    cp_placeholder: '#bebebe'
+    cp_site_bg: '#444f60'
+
+    # ---Explanation---
+    # `container` for spaces containing items; backgrounds for page and/or sections.
+    # + alternatives:
+    # _1/_2/_3
+    # + optional: extra-state: active, border
+    # e.g.: container_1, container_1_active.
+
+    # default container
+    cp_container_1: '#fcfcfc'
+    cp_container_1_active: '#eff4f7'
+    cp_container_1_border: '#ededed'
+
+    # sections
+    cp_container_2: '#fff'
+    cp_container_2_alt: '#fbfbfb'
+
+    # sidebar
+    cp_container_3: '#344258'
+    cp_container_3_border: '#2d3a4e'
+
+    # notification prio 1
+    cp_container_4: 'beige'
+
+    # notification prio lowest
+    cp_container_5: 'whitesmoke'
+    cp_container_5_default_opt: 'azure'
+
+    # ---Explanation---
+    # `item` for details; usually buttons and text.
+    # Same naming structure as `container`, but additionally:
+    # + optional: elements compositioned together for the same alternative:
+    # _1/_2/_3
+    # e.g.: item_1_1 (title), item_1_2 (paragraph).
+
+    # backtotop
+    cp_item_1_1: '#344258'
+    cp_item_1_1_active: '#f39200'
+    cp_item_1_2: '#fff'
+
+    # testimonials; uses $cp_container_1
+    cp_item_2_1: '#333'
+    cp_item_2_2: '#fff'
+    cp_item_2_3: '#444f60'
+
+    # dropdown, navbar; use $cp_container_1
+    cp_item_3: '#878787'
+    cp_item_3_active: '#f39200'
+    cp_item_3_border: 'whitesmoke'
+
+    # feature cards (uses $cp_container_1), footer (uses $cp_site_bg), hero, sections
+    cp_item_4_1: '#444f60'
+    cp_item_4_2: '#999'
+    cp_item_4_3: '#fff'
+    cp_item_4_3_secondary: '#f39200'
+    cp_item_4_4: '#98a9c3'
+
+    # buttons
+    cp_item_5_1: '#fff'
+    cp_item_5_1_bg: '#4fc1ea'
+    cp_item_5_2: '#fff'
+    cp_item_5_2_bg: '#f39200'
+    cp_item_5_3: '#fff'
+    cp_item_5_3_bg: '#00efb7'
+
+    # TODO. replace lighten() / darken() calls
 # ------------------------------------------
 # Privacy
 # ------------------------------------------

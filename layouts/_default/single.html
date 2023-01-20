@@ -3,7 +3,7 @@
 
 <head>
   {{ partial "meta.html" . }}
-  <title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
+  <title>{{ if .Params.seo_title }}{{ .Params.seo_title }}{{ else if .Params.title }}{{ .Params.title }}{{ else if .Site.Params.Title }}{{ .Site.Params.Title }}{{ end }}</title>
   {{ partial "css.html" . }}
 </head>
 
@@ -15,11 +15,16 @@
   </div>
   {{ end }}
 
+  {{ partial "navbar.html" . }}
+  {{ partial "navbar-clone.html" . }}
+
   {{ block "main" . }}
 
-  {{ partial "single/single.html" . }}
+  {{ partial "single/content.html" . }}
 
-  {{ if .Params.include_footer }}
+  {{ end }}
+
+  {{ if .Site.Params.footer }}
   {{ partial "footer.html" . }}
   {{ end }}
 
@@ -30,9 +35,9 @@
   {{ partial "single/sidebar.html" . }}
   {{ end }}
 
-  {{ end }}
-
   {{ partial "javascript.html" . }}
+
+  {{ partial "cookie-notification.html" . }}
 </body>
 
 </html>

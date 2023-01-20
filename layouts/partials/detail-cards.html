@@ -1,7 +1,7 @@
-{{- $section1 := .Site.Params.section1 }}
-{{- $title    := index $section1 "title" }}
-{{- $subtitle := index $section1 "subtitle" }}
-{{- $tiles    := index $section1 "tiles" }}
+{{- $detailCards := $.Param "detailCards" }}
+{{- $title       := index $detailCards "title" }}
+{{- $subtitle    := index $detailCards "subtitle" }}
+{{- $cards       := index $detailCards "cards" }}
 <section class="section is-medium">
   <div class="container">
     <div class="title-wrapper has-text-centered">
@@ -12,9 +12,10 @@
 
     <div class="content-wrapper">
       <div class="columns">
-        {{- range $tiles }}
+        {{- range $cards }}
         <div class="column is-one-third">
-          <div class="feature-card is-bordered height-aligned has-text-centered revealOnScroll delay-1" data-animation="fadeInLeft">
+          <div class="feature-card is-bordered height-aligned has-text-centered revealOnScroll delay-1"
+            data-animation="fadeInLeft">
             <div class="card-title">
               <h4>{{ .title }}</h4>
             </div>
@@ -25,7 +26,7 @@
               <p>{{ .text }}</p>
             </div>
             <div class="card-action">
-              <a href="{{ .url }}" class="button btn-align-md accent-btn raised">{{ .buttonText }}</a>
+              <a href="{{ .url | absLangURL }}" class="button btn-align-md accent-btn raised">{{ .buttonText }}</a>
             </div>
           </div>
         </div>

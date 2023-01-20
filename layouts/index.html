@@ -1,38 +1,35 @@
 {{ define "main" }}
 
-{{ if .Site.Params.hero }}
+{{ if $.Param "hero" }}
 {{ partial "hero.html" . }}
 {{ end }}
 
-{{ if .Site.Params.section1 }}
-{{ partial "section1.html" . }}
+{{ if $.Param "detailCards" }}
+{{ partial "detail-cards.html" . }}
 {{ end }}
 
-{{ if .Site.Params.section2 }}
-{{ partial "section2.html" . }}
+{{ if $.Param "featureHighlights" }}
+{{ partial "feature-highlights.html" . }}
 {{ end }}
 
-{{ if .Site.Params.section3 }}
-{{ partial "section3.html" . }}
+{{ if $.Param "gallery" }}
+{{ partial "gallery.html" . }}
 {{ end }}
 
-{{ if .Site.Params.section4 }}
-{{ partial "section4.html" . }}
+{{ if $.Param "video" }}
+{{ partial "video.html" . }}
 {{ end }}
 
-{{ if .Site.Params.section5 }}
-{{ partial "section5.html" . }}
+{{ if $.Param "heroItem" }}
+{{ partial "hero-item.html" . }}
 {{ end }}
 
-{{ if .Site.Params.footer }}
-{{ partial "footer.html" . }}
+{{ if $.Param "quoteCards" }}
+{{ partial "quote-cards.html" . }}
 {{ end }}
 
-<!-- Back To Top Button -->
-<div id="backtotop"><a href="#"></a></div>
-
-{{ if .Site.Params.sidebar }}
-{{ partial "sidebar.html" . }}
+{{ if $.Param "contactUs" }}
+{{ partial "contact-us.html" . }}
 {{ end }}
 
 {{ end }}

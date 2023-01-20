@@ -1,0 +1,51 @@
+/*! _cards.scss v1.0.0 | Commercial License | built on top of bulma.io/Bulmax */
+
+/* ==========================================================================
+Cards and Card content styles
+========================================================================== */
+
+// Feature Card
+.feature-card {
+    width: 300px;
+    background-color: $cp-container-1;
+    border-radius: 3px;
+    margin: 0 auto;
+
+    .card-title h4 {
+        padding-top: 25px;
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: $cp-item-4-1;
+    }
+
+    .card-icon img {
+        height: 120px;
+        margin-top: 20px;
+    }
+
+    .card-text {
+        padding: 0 40px;
+
+        p {
+            color: $cp-item-4-2;
+        }
+
+        &.height-aligned {
+            flex-grow: 1;
+        }
+    }
+
+    .card-action {
+        margin: 10px 0px 10px 0px;
+    }
+
+    &.is-bordered {
+        border: 1px solid $cp-container-1-border;
+    }
+
+    &.height-aligned {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+}

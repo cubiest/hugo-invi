@@ -21,7 +21,7 @@
           <ul class="link-list">
             {{- range .links }}
             <li>
-              <a href="{{ .link }}">
+              <a href="{{ .url | absLangURL }}">
                 {{ .text }}
               </a>
             </li>
@@ -37,7 +37,7 @@
             <nav class="level is-mobile">
               <div class="level-left">
                 {{- range $socialMedia }}
-                <a class="level-item" href="{{ .link }}">
+                <a class="level-item" href="{{ .url }}" rel="noopener, nofollow">
                   <span class="icon"><i class="fa-brands fa-{{ .icon }}"></i></span>
                 </a>
                 {{- end }}
@@ -45,7 +45,7 @@
             </nav>
 
             {{- if $bulmaLogo }}
-            <a href="https://bulma.io" target="_blank">
+            <a href="https://bulma.io" target="_blank" rel="noopener, nofollow">
               <img src="{{ "/images/logos/made-with-bulma.png" | relURL }}" alt="Made with Bulma" width="128"
                 height="24">
             </a>

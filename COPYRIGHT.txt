@@ -52,6 +52,19 @@ Comment: jQuery.
 Copyright: 2022, OpenJS Foundation and other contributors
 License: Expat
 
+Files: ./static/modules/photoswipe
+Comment: PhotoSwipe Lightbox 5.3.3.
+Copyright: 2014-2022, Dmitry Semenov
+License: Expat
+
+Files: ./static/modules/js.cookie.*
+Comment: js-cookie v3.0.1.
+Copyright: 2018, Klaus Hartl.
+           2018, Fagner Brack.
+           2018, GitHub Contributors.
+License: Expat
+
+
 License: Expat
  Permission is hereby granted, free of charge, to any person obtaining
  a copy of this software and associated documentation files (the

@@ -1,18 +1,18 @@
 # https://github.com/gohugoio/hugoThemesSiteBuilder#theme-configuration
 name = "Hugo Invi"
-version = "1.1"
+version = "2.0"
 license = "MIT"
 licenselink = "https://github.com/cubiest/hugo-invi/blob/master/LICENSE.txt"
-description = "A Hugo adaptation of the Fresh theme from CSS Ninja"
+description = "A simple, clean and lightweight Hugo theme for multilingual websites, inspired by CSS Ninja's Fresh theme"
 
 homepage = "https://github.com/cubiest/hugo-invi"
 
-tags = ["responsive", "minimal", "light", "company", "clean", "landing"]
+tags = ["responsive", "minimal", "light", "company", "clean", "multilingual", "gallery"]
 
 features = []
 
 # minimum hugo version
-min_version = "0.107"
+min_version = "0.109"
 
 [author]
   name = "Cubiest"

@@ -3,7 +3,7 @@
 
 <head>
   {{ partial "meta.html" . }}
-  <title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
+  <title>{{ if .Params.seo_title }}{{ .Params.seo_title }}{{ else if .Params.title }}{{ .Params.title }}{{ else if .Site.Params.Title }}{{ .Site.Params.Title }}{{ end }}</title>
   {{ partial "css.html" . }}
 </head>
 
@@ -15,7 +15,14 @@
   </div>
   {{ end }}
 
+  {{ partial "navbar.html" . }}
+  {{ partial "navbar-clone.html" . }}
+
   {{ block "main" . }}
+  {{ end }}
+
+  {{ if .Site.Params.footer }}
+  {{ partial "footer.html" . }}
   {{ end }}
 
   <!-- Back To Top Button -->
@@ -26,6 +33,8 @@
   {{ end }}
 
   {{ partial "javascript.html" . }}
+
+  {{ partial "cookie-notification.html" . }}
 </body>
 
 </html>

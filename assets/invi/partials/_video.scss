@@ -1,0 +1,35 @@
+.video-embed-notification {
+    margin: 0 auto;
+
+    .has-text-left {
+        padding-top: 20px;
+    }
+
+    .notification-text {
+        padding: 10px;
+        background-color: $cp-container-4;
+
+        .button-row {
+            padding: inherit;
+        }
+    }
+
+    img {
+        width: 100%;
+    }
+}
+
+.embedded-video-parent {
+    position: relative;
+    max-width: 100%;
+    padding-bottom: 56.25%;
+    margin-top: 20px;
+
+    iframe {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+    }
+}
