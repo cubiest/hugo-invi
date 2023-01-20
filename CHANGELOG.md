@@ -5,7 +5,27 @@ All notable changes to this project (since its fork) are documented in this file
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 
-## [2.0] - 2022-12-xx
+## [2.x] - 2023-xx-xx
+
+### Added
+
+
+### Changed
+
+
+### Deprecated
+
+
+### Removed
+
+
+### Fixed
+
+
+### Security
+
+
+## [2.0] - 2023-01-20
 
 ### Added
 
@@ -33,9 +53,6 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 * Property names are called "name" instead of "title", if they represent e.g. menu options in the navbar exactly that; and not "link", which is the element
 
 
-### Deprecated
-
-
 ### Removed
 
 * Site param `include_footer` from front matter; show footer at all times.
@@ -58,7 +75,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 ### Added
 
 * Support for copyright notice
-* "_markup/renderer-link": adds *noopener* and *nofollow* relation to markdown links in `content/`, if external link (i.e. URL begins with "http")
+* "_markup/render-link": adds *noopener* and *nofollow* relation to markdown links in `content/`, if external link (i.e. URL begins with "http")
 * Allow configuring Feature Card height
 
 

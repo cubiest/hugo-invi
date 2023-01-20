@@ -36,6 +36,11 @@ languages:
     languageName: English
     languageCode: en-us
     # ------------------------------------------
+    # Contact Us
+    # ------------------------------------------
+    emailEnterName: "Enter your name"
+    emailEnterEMailAddress: "Enter your email address"
+    # ------------------------------------------
     # Video - accept 3rd party cookies
     # ------------------------------------------
     video:
@@ -174,6 +179,11 @@ languages:
     weight: 2
     languageName: Deutsch
     languageCode: de-de
+    # ------------------------------------------
+    # Contact Us
+    # ------------------------------------------
+    emailEnterName: "Trage deinen Namen ein"
+    emailEnterEMailAddress: "Trage deine E-Mail-Adresse ein"
     # ------------------------------------------
     # Video - accept 3rd party cookies
     # ------------------------------------------
