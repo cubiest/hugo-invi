@@ -1,17 +1,33 @@
-{{- $inServerMode := .Site.IsServer }}
-{{- $sass         := "style.sass" }}
-{{- $cssTarget    := "css/style.css" }}
-{{- $cssOpts      := cond ($inServerMode) (dict "targetPath" $cssTarget "enableSourceMap" true "transpiler" "libsass" "vars" site.Params.style) (dict "targetPath" $cssTarget "outputStyle" "compressed" "transpiler" "libsass" "vars" site.Params.style) }}
 <link rel="icon" type="image/png" href="{{ "images/favicon.png" | relURL }}" />
-<!-- bulma, fresh start -->
-{{- if $inServerMode }}
-{{- $css := resources.Get $sass | toCSS $cssOpts }}
-<link rel="stylesheet" type="text/css" href="{{ $css.RelPermalink }}">
-{{- else }}
-{{- $css := resources.Get $sass | toCSS $cssOpts | minify | fingerprint }}
-<link rel="stylesheet" type="text/css" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
+{{- $inServerMode := .Site.IsServer }}
+<!-- bulma, invi, custom css start -->
+{{- $inviCSSTarget := "css/style.css" }}
+{{ if .Site.Params.customCSS }}
+    {{- $inviCSSTarget = "css/temp_invi_style.css" }}
 {{- end }}
-<!-- bulma, fresh end -->
+{{- $inviCSSOpts := cond ($inServerMode)
+    (dict "targetPath" $inviCSSTarget "enableSourceMap" true "transpiler" "libsass" "vars" site.Params.style)
+    (dict "targetPath" $inviCSSTarget "outputStyle" "compressed" "transpiler" "libsass" "vars" site.Params.style)
+}}
+{{- $inviSass    := resources.Get "style.sass" | toCSS $inviCSSOpts }}
+{{- $cssResource := $inviSass }}
+{{ with .Site.Params.customCSS }}
+    {{- $customCSSTarget := "css/temp_custom_style.css" }}
+    {{- $customCSSOpts   := cond ($inServerMode)
+        (dict "targetPath" $customCSSTarget "enableSourceMap" true "transpiler" "libsass" "vars" site.Params.style)
+        (dict "targetPath" $customCSSTarget "outputStyle" "compressed" "transpiler" "libsass" "vars" site.Params.style)
+    }}
+    {{- $customSass      := resources.Get . | toCSS $customCSSOpts }}
+    {{- $cssResource      = slice $inviSass $customSass | resources.Concat "css/style.css" }}
+{{- end }}
+{{- if $inServerMode }}
+    {{- $css := $cssResource }}
+    <link rel="stylesheet" type="text/css" href="{{ $css.RelPermalink }}">
+{{- else }}
+    {{- $css := $cssResource | minify }}
+    <link rel="stylesheet" type="text/css" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
+{{- end }}
+<!-- bulma, invi css end -->
 <!-- photoswipe -->
 <link rel="stylesheet" type="text/css" href="{{ "modules/photoswipe/photoswipe.css" | relURL }}">
 <!-- fontawesome icons start -->
