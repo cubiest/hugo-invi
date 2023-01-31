@@ -5,24 +5,28 @@ All notable changes to this project (since its fork) are documented in this file
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 
-## [2.x] - 2023-xx-xx
+## [2.0.1] - 2023-01-31
 
 ### Added
+
+* Support including website's custom javascript (see README.md)
+* Support merging website's custom styling into theme's styling (see README.md)
 
 
 ### Changed
 
-
-### Deprecated
+* Moved `static/images` to subfolder exampleSite.
 
 
 ### Removed
 
+* `images/` folder.
 
+ 
 ### Fixed
 
-
-### Security
+* Placement of cookie notification: now truly stays at the window's bottom.
+* Defined `sameSite` value for cookies (web browser was showing warnings).
 
 
 ## [2.0] - 2023-01-20
