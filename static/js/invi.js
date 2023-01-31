@@ -15,9 +15,7 @@ $(document).ready(function () {
         var notification = $('#cookie-notification');
         if (notification.length) {
             var allow_other_cookies = Cookies.get("allow-nonfunctional-website-cookies");
-            if (allow_other_cookies === null || typeof allow_other_cookies === "undefined") {
-                // TODO: change html.background-color to `whitesmoke`
-            } else {
+            if (allow_other_cookies !== null && typeof allow_other_cookies !== "undefined") {
                 notification.hide();
             }
         }
@@ -213,20 +211,19 @@ $(document).ready(function () {
  * @return {boolean} whether to accept cookies beyond the necessary functional ones.
  */
 function handleWebsiteCookies(accept) {
-    Cookies.set("allow-nonfunctional-website-cookies", accept, { expires: 730 }); // i.e. in 2 years
+    Cookies.set("allow-nonfunctional-website-cookies", accept, { expires: 730, sameSite: 'lax' }); // i.e. in 2 years
 
     var notification = $("#cookie-notification");
     if (notification.length) {
         notification.hide();
     }
-    // TODO: change html.background-color to `#444F60`
 }
 
 /**
  * acceptCookiesAndShowYouTubeVideo user clicked on youtube cookie consent button beneath video placeholder.
  */
 function acceptCookiesAndShowYouTubeVideo() {
-    Cookies.set("allow-youtube-cookies", true, { expires: 730 }); // i.e. in 2 years
+    Cookies.set("allow-youtube-cookies", true, { expires: 730, sameSite: 'lax' }); // i.e. in 2 years
 
     // hide consent notification
     var notification = document.getElementsByClassName("video-embed-notification")[0];

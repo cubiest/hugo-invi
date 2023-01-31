@@ -26,13 +26,26 @@ Files: *
 Comment: Hugo Invi
 Copyright: 2018, lucperkins.
            2019-2022, Stefan M..
-           2022, Cubiest.
+           2022-2023, Cubiest.
 License: Expat
 
 Files: ./assets/bulma/*
 Comment: Bulma
-Copyright: 2022, Jeremy Thomas.
+Copyright: 2023, Jeremy Thomas.
 License: Expat
+Source: https://github.com/jgthms/bulma
+
+Files: ./static/images/logos/made-with-bulma.png
+Comment: Bulma
+Copyright: 2023, Jeremy Thomas.
+License: Expat
+Source: https://github.com/jgthms/bulma
+
+Files: ./static/images/loaders/rings.svg
+Comment: SVG-Loaders
+Copyright: 2014, Sam Herbert.
+License: Expat
+Source: https://github.com/SamHerbert/SVG-Loaders
 
 Files: ./static/webfonts/fa-*
  ./static/css/brands.*
@@ -46,16 +59,19 @@ to represent the company, product, or service to which they refer**.
  Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: Expat.
 Copyright: 2022, Fonticons Inc.
 License: CC-BY-4.0, OFL-1.1, Expat
+Source: https://github.com/FortAwesome/Font-Awesome
 
 Files: ./static/modules/jquery-3.6.1.min.js
 Comment: jQuery.
 Copyright: 2022, OpenJS Foundation and other contributors
 License: Expat
+Source: https://github.com/jquery/jquery
 
 Files: ./static/modules/photoswipe
 Comment: PhotoSwipe Lightbox 5.3.3.
 Copyright: 2014-2022, Dmitry Semenov
 License: Expat
+Source: https://github.com/dimsemenov/PhotoSwipe
 
 Files: ./static/modules/js.cookie.*
 Comment: js-cookie v3.0.1.
@@ -63,7 +79,7 @@ Copyright: 2018, Klaus Hartl.
            2018, Fagner Brack.
            2018, GitHub Contributors.
 License: Expat
-
+Source: https://github.com/js-cookie/js-cookie/
 
 License: Expat
  Permission is hereby granted, free of charge, to any person obtaining

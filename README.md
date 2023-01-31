@@ -31,6 +31,18 @@ Visual
 
 ## Usage
 
+### Custom Javascript
+
+* Write custom javascript and declare the path in config file using `params.customJS`
+  * layouts/partials/javascript.html will fetch and insert it in each page including this partial (as of now: `baseof.html`, `single.html`)
+
+
+### Merge Project styling with this theme
+
+* Write custom sass file in your `assets` folder and declare the path in config file using `params.customCSS`
+  * The styling will be merged with this theme
+
+
 ### Content Shortcodes
 
 [Hugo Docs](https://gohugo.io/content-management/shortcodes/)
