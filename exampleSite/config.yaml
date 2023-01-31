@@ -349,6 +349,14 @@ params:
     # Default width/height. Uncomment if you need to change
     # width: 112
     # height: 28
+  # ------------------------------------------
+  # Theme Override
+  # ------------------------------------------
+  customJS:
+    - "js/main.js"
+  # ------------------------------------------
+  # Theme Color Palette
+  # ------------------------------------------
   style:
     # base colors
     # cp_base_primary: '#4fc1ea'
