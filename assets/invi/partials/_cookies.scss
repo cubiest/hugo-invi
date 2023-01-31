@@ -1,6 +1,7 @@
 #cookie-notification {
     background-color: $cp-container-5;
-    position: sticky;
+    position: fixed;
+    width: 100%;
     bottom: 0;
     padding: 8px;
 }
