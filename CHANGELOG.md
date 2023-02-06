@@ -4,6 +4,20 @@ All notable changes to this project (since its fork) are documented in this file
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [2.0.2] - 2023-02-06
+
+### Added
+
+* config option: `footer.useColumns`
+  * if set to false, toggle footer style to left-aligned (instead of columns).
+
+
+### Changed
+
+* exampleSite/config.yaml > `baseURL` changed to localhost:1313.
+* If content file for hero-item.html provides no button text, hide button.
+* If content file for hero.html provides no image, just show header horizontally centered (and hide button if no text defined).
+
 
 ## [2.0.1] - 2023-01-31
 
