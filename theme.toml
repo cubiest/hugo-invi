@@ -1,6 +1,6 @@
 # https://github.com/gohugoio/hugoThemesSiteBuilder#theme-configuration
 name = "Hugo Invi"
-version = "2.0.1"
+version = "2.0.2"
 license = "MIT"
 licenselink = "https://github.com/cubiest/hugo-invi/blob/master/LICENSE.txt"
 description = "A simple, clean and lightweight Hugo theme for multilingual websites, inspired by CSS Ninja's Fresh theme"

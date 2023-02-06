@@ -19,10 +19,12 @@
       <h3 class="subtitle is-5 is-muted">{{ $subtitle }}</h3>
     </div>
 
+    {{- if $buttonText }}
     <p class="has-text-centered mt-20">
       <a class="button cta is-large rounded secondary-btn raised" href="{{ $buttonUrl | absLangURL }}">
         {{ $buttonText }}
       </a>
     </p>
+    {{- end }}
   </div>
 </section>

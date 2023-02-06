@@ -1,7 +1,7 @@
 # ------------------------------------------
 # Website Settings
 # ------------------------------------------
-baseURL: http://something-invigorating.org/
+baseURL: http://127.0.0.1:1313
 languageCode: en-us
 # Disables warnings
 disableKinds:
@@ -126,6 +126,7 @@ languages:
     # Footer
     # ------------------------------------------
     footer:
+      useColumns: false
       # Logo (from /images/logos/___)
       logo: fresh-white-alt.svg
       # Social Media Title
@@ -270,6 +271,7 @@ languages:
     # Footer
     # ------------------------------------------
     footer:
+      useColumns: false
       # Logo (from /images/logos/___)
       logo: fresh-white-alt.svg
       # Social Media Title
