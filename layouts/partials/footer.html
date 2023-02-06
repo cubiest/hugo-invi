@@ -1,4 +1,5 @@
 {{- $footer           := .Site.Params.footer }}
+{{- $useColumns       := index $footer "useColumns" }}
 {{- $logo             := index $footer "logo" }}
 {{- $quickLinks       := index $footer "quicklinks" }}
 {{- $socialMedia      := index $footer "socialmedia" }}
@@ -6,14 +7,23 @@
 {{- $socialMediaTitle := index $footer "socialmediatitle" }}
 <footer class="footer footer-dark">
   <div class="container">
+    {{- if $useColumns }}
     <div class="columns">
       <div class="column">
+    {{- else }}
+    <div style="display:flex;">
+      <div style="padding: .75rem;">
+    {{- end }}
         <div class="footer-logo">
           <img src="{{ printf "/images/logos/%s" $logo | relURL }}">
         </div>
       </div>
       {{- range $quickLinks }}
+      {{- if $useColumns }}
       <div class="column">
+      {{- else }}
+      <div style="padding: .75rem;">
+      {{- end }}
         <div class="footer-column">
           <div class="footer-header">
             <h3>{{ .title }}</h3>
@@ -30,7 +40,11 @@
         </div>
       </div>
       {{- end }}
+      {{- if $useColumns }}
       <div class="column">
+      {{- else }}
+      <div style="padding: .75rem;">
+        {{- end }}
         <div class="footer-column">
           <div class="footer-header">
             <h3>{{ $socialMediaTitle }}</h3>
